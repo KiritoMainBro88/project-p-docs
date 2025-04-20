@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Commands - Project P Bot</title> <!-- Replace -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <!-- Sidebar Navigation -->
+        <h3>Project P Bot</h3> <!-- Replace -->
+        <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="getting-started.html">Getting Started & Verification</a></li>
+        </ul>
+
+        <h3>Commands</h3>
+        <ul>
+            <li><a href="general.html" class="active">General</a></li>
+            <li><a href="moderation.html">Moderation</a></li>
+            <li><a href="rolemanagement.html">Role Management</a></li>
+            <li><a href="giveaways.html">Giveaways</a></li>
+            <!-- Add links for other categories -->
+        </ul>
+
+         <h3>Links</h3>
+         <ul>
+            <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
+            <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
+         </ul>
+    </aside>
+
+    <main class="main-content">
+        <h1>General Commands</h1>
+        <p>Basic utility and informational commands.</p>
+        <p>Default Prefix: <code>.</code></p>
+
+        <!-- HELP COMMAND -->
+        <div class="command-def" id="help">
+            <h3>.help</h3>
+            <p class="syntax">Syntax: <code>.help [category/command]</code></p>
+            <p>Displays a list of command categories or detailed information about a specific command/category.</p>
+
+            <p class="params-title">Parameters:</p>
+            <ul>
+                <li><code>[category/command]</code> (Optional): The name of a command category (e.g., Moderation) or a specific command (e.g., kick) to get more details.</li>
+            </ul>
+
+            <p class="examples-title">Examples:</p>
+            <div class="examples">
+                <pre><code>.help</code></pre>
+                <pre><code>.help Moderation</code></pre>
+                <pre><code>.help kick</code></pre>
+            </div>
+        </div>
+
+        <!-- PING COMMAND -->
+        <div class="command-def" id="ping">
+            <h3>.ping</h3>
+            <p class="syntax">Syntax: <code>.ping</code></p>
+            <p>Checks the bot's current response time (latency) to Discord.</p>
+
+            <p class="examples-title">Examples:</p>
+            <div class="examples">
+                <pre><code>.ping</code></pre>
+            </div>
+            <p>The bot will respond with something like "Pong! `[XX]`ms".</p>
+        </div>
+
+        <!-- HELLO COMMAND -->
+        <div class="command-def" id="hello">
+             <h3>.hello</h3>
+             <p class="syntax">Syntax: <code>.hello</code></p>
+             <p>A simple command to make the bot say hello back to you.</p>
+
+             <p class="examples-title">Examples:</p>
+             <div class="examples">
+                 <pre><code>.hello</code></pre>
+             </div>
+             <p>The bot will respond with "Hello @YourUsername!".</p>
+        </div>
+
+        <!-- Add other general commands like .stats, .info, .uptime if they exist -->
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,215 @@
+/* Basic Reset & Dark Theme */
+body {
+    margin: 0;
+    font-family: "gg sans", "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Discord uses gg sans */
+    background-color: #36393f; /* Discord dark background */
+    color: #dcddde; /* Discord light text */
+    display: flex;
+    min-height: 100vh;
+}
+
+a {
+    color: #00a8fc; /* Discord link blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff; /* White headings */
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+h1 { font-size: 2em; border-bottom: 1px solid #4f545c; padding-bottom: 0.3em; margin-top: 0;}
+h2 { font-size: 1.5em; border-bottom: 1px solid #4f545c; padding-bottom: 0.3em; }
+h3 { font-size: 1.25em; }
+
+code {
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    background-color: #2f3136; /* Slightly darker background for code */
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+pre {
+    background-color: #2f3136;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto; /* Handle long code lines */
+    border: 1px solid #232528;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Layout: Sidebar + Main Content */
+.sidebar {
+    width: 240px;
+    background-color: #2f3136; /* Slightly darker sidebar */
+    padding: 20px;
+    height: 100vh; /* Full height */
+    position: sticky; /* Stick to the side */
+    top: 0;
+    overflow-y: auto; /* Scroll if content is long */
+    border-right: 1px solid #4f545c;
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+}
+
+.main-content {
+    flex-grow: 1; /* Take remaining width */
+    padding: 30px 40px;
+    max-width: 900px; /* Limit content width for readability */
+    /* Removed margin-left/right: auto; let flexbox handle spacing */
+}
+
+/* Sidebar Navigation */
+.sidebar h3 {
+    color: #8e9297; /* Category header color */
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: 700; /* Bolder category headers */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li a {
+    display: block;
+    padding: 8px 10px;
+    color: #dcddde;
+    border-radius: 4px;
+    font-size: 0.95em;
+    margin-bottom: 2px; /* Small spacing between links */
+}
+
+.sidebar li a:hover {
+    background-color: #3a3d43;
+    text-decoration: none;
+    color: #fff; /* Slightly brighter text on hover */
+}
+
+.sidebar li a.active { /* Style for the current page's link */
+    background-color: #40444b;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+/* Command Definition Blocks */
+.command-def {
+    background-color: #2f3136;
+    border: 1px solid #4f545c;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 20px;
+    scroll-margin-top: 20px; /* Offset for sticky header if you add one */
+}
+
+.command-def h3 { /* Command Name Title */
+    margin-top: 0;
+    font-size: 1.4em;
+    color: #00a8fc; /* Highlight command name */
+    font-family: Consolas, Monaco, monospace; /* Monospace for command name */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.command-def .syntax {
+    margin-bottom: 15px;
+}
+
+.command-def .syntax code {
+    font-size: 1.1em;
+    color: #b9bbbe;
+    background-color: #292b2f; /* Darker bg for syntax block */
+    display: block; /* Make it block level */
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.command-def .params-title,
+.command-def .examples-title,
+.command-def .perms-title {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 0.9em;
+    text-transform: uppercase; /* Section titles */
+}
+
+.command-def ul { /* Used for Parameters / Permissions lists */
+    list-style: none; /* Remove default bullets */
+    padding-left: 5px;
+    margin-bottom: 15px;
+}
+.command-def ul li {
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+}
+
+/* Custom bullet point */
+.command-def ul li::before {
+    content: '•';
+    color: #00a8fc; /* Bullet color */
+    position: absolute;
+    left: 0;
+    top: 0px; /* Adjust vertical alignment */
+    font-size: 1.2em; /* Bullet size */
+}
+
+.command-def ul code { /* Parameters */
+ color: #fac56c; /* Yellowish for parameters */
+ background-color: transparent; /* Remove bg for inline param names */
+ padding: 0;
+ font-weight: 500;
+}
+.command-def ul code::before { content: '`'; } /* Add backticks visually */
+.command-def ul code::after { content: '`'; }
+
+.command-def .examples pre {
+    background-color: #202225; /* Even darker bg for examples */
+    border: 1px solid #4f545c;
+}
+
+/* Utility */
+.highlight { /* For important notes */
+    background-color: rgba(88, 101, 242, 0.1); /* Discord blurple highlight */
+    border-left: 3px solid #5865f2; /* Discord blurple */
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+.highlight code {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive consideration (very basic) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid #4f545c;
+    }
+    .main-content {
+        padding: 20px;
+    }
+}

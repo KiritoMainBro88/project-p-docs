@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderation Commands - Project P Bot</title> <!-- Replace -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <!-- Sidebar Navigation -->
+        <h3>Project P Bot</h3> <!-- Replace -->
+        <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="getting-started.html">Getting Started & Verification</a></li>
+        </ul>
+
+        <h3>Commands</h3>
+        <ul>
+            <li><a href="general.html">General</a></li>
+            <li><a href="moderation.html" class="active">Moderation</a></li>
+            <li><a href="rolemanagement.html">Role Management</a></li>
+            <li><a href="giveaways.html">Giveaways</a></li>
+            <!-- Add links for other categories -->
+        </ul>
+
+         <h3>Links</h3>
+         <ul>
+            <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
+            <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
+         </ul>
+    </aside>
+
+    <main class="main-content">
+        <h1>Moderation Commands</h1>
+        <p>Tools to manage users, messages, and channels to maintain a healthy community.</p>
+        <p>Default Prefix: <code>.</code></p>
+
+        <!-- KICK COMMAND -->
+        <div class="command-def" id="kick">
+            <h3>.kick</h3>
+            <p class="syntax">Syntax: <code>.kick <member> [reason]</code></p>
+            <p>Removes a specified member from the server.</p>
+
+            <p class="perms-title">Required Permissions:</p>
+            <ul>
+                <li>Bot: <code>Kick Members</code></li>
+                <li>User: <code>Kick Members</code></li>
+            </ul>
+
+            <p class="params-title">Parameters:</p>
+            <ul>
+                <li><code><member></code> (Required): The user to kick (@Mention, ID, Username#Tag).</li>
+                <li><code>[reason]</code> (Optional): Why the user is being kicked. Logged and potentially DMed.</li>
+            </ul>
+
+            <p class="examples-title">Examples:</p>
+            <div class="examples">
+                <pre><code>.kick @User123 Spamming invites</code></pre>
+                <pre><code>.kick 987654321098765432 Repeated rule breaking</code></pre>
+            </div>
+        </div>
+
+        <!-- BAN COMMAND -->
+        <div class="command-def" id="ban">
+             <h3>.ban</h3>
+             <p class="syntax">Syntax: <code>.ban <member> [days_to_delete] [reason]</code></p>
+             <p>Bans a member from the server, optionally deleting their recent messages.</p>
+
+             <p class="perms-title">Required Permissions:</p>
+             <ul>
+                 <li>Bot: <code>Ban Members</code></li>
+                 <li>User: <code>Ban Members</code></li>
+             </ul>
+
+             <p class="params-title">Parameters:</p>
+             <ul>
+                 <li><code><member></code> (Required): The user to ban (@Mention, ID, Username#Tag). Can also be a User ID for someone not in the server.</li>
+                 <li><code>[days_to_delete]</code> (Optional): Number of days (0-7) of messages to delete from the banned user. Defaults to 0.</li>
+                 <li><code>[reason]</code> (Optional): Why the user is being banned.</li>
+             </ul>
+
+             <p class="examples-title">Examples:</p>
+             <div class="examples">
+                 <pre><code>.ban @BadUser#5678 1 Extreme toxicity</code></pre>
+                 <pre><code>.ban 112233445566778899 Raid account</code></pre>
+                 <pre><code>.ban @AnotherUser 7</code></pre>
+             </div>
+        </div>
+
+        <!-- UNBAN COMMAND -->
+        <div class="command-def" id="unban">
+             <h3>.unban</h3>
+             <p class="syntax">Syntax: <code>.unban <user_id> [reason]</code></p>
+             <p>Unbans a user, allowing them to rejoin the server if they have an invite.</p>
+
+             <p class="perms-title">Required Permissions:</p>
+             <ul>
+                 <li>Bot: <code>Ban Members</code></li>
+                 <li>User: <code>Ban Members</code></li>
+             </ul>
+
+             <p class="params-title">Parameters:</p>
+             <ul>
+                 <li><code><user_id></code> (Required): The ID of the user to unban. You cannot use mentions here.</li>
+                 <li><code>[reason]</code> (Optional): Why the user is being unbanned.</li>
+             </ul>
+
+             <p class="examples-title">Examples:</p>
+             <div class="examples">
+                 <pre><code>.unban 112233445566778899 Appeal accepted</code></pre>
+             </div>
+             <p class="highlight">Tip: You can usually find a User ID by enabling Developer Mode in Discord, then right-clicking the user and selecting "Copy User ID".</p>
+        </div>
+
+        <!-- TIMEOUT (MUTE) COMMAND -->
+        <div class="command-def" id="timeout">
+             <h3>.timeout</h3>
+             <p class="syntax">Syntax: <code>.timeout <member> <duration> [reason]</code></p>
+             <p>Temporarily prevents a member from interacting (sending messages, speaking in VC). Uses Discord's built-in Timeout feature.</p>
+
+             <p class="perms-title">Required Permissions:</p>
+             <ul>
+                 <li>Bot: <code>Moderate Members</code></li>
+                 <li>User: <code>Moderate Members</code></li>
+             </ul>
+
+             <p class="params-title">Parameters:</p>
+             <ul>
+                 <li><code><member></code> (Required): The user to timeout (@Mention, ID, Username#Tag).</li>
+                 <li><code><duration></code> (Required): How long to timeout for (e.g., <code>10m</code>, <code>1h</code>, <code>3d</code>, <code>1w</code>). Max is usually 28 days.</li>
+                 <li><code>[reason]</code> (Optional): Why the user is being timed out.</li>
+             </ul>
+
+             <p class="examples-title">Examples:</p>
+             <div class="examples">
+                 <pre><code>.timeout @NoisyUser 30m Spamming chat</code></pre>
+                 <pre><code>.timeout 123456789012345678 2h Arguing after warning</code></pre>
+             </div>
+        </div>
+
+        <!-- UNTIMEOUT COMMAND -->
+        <div class="command-def" id="untimeout">
+             <h3>.untimeout</h3>
+             <p class="syntax">Syntax: <code>.untimeout <member> [reason]</code></p>
+             <p>Removes an active timeout from a member.</p>
+
+             <p class="perms-title">Required Permissions:</p>
+             <ul>
+                  <li>Bot: <code>Moderate Members</code></li>
+                  <li>User: <code>Moderate Members</code></li>
+             </ul>
+
+             <p class="params-title">Parameters:</p>
+             <ul>
+                  <li><code><member></code> (Required): The user to remove timeout from (@Mention, ID, Username#Tag).</li>
+                  <li><code>[reason]</code> (Optional): Why the timeout is being removed.</li>
+             </ul>
+
+             <p class="examples-title">Examples:</p>
+             <div class="examples">
+                  <pre><code>.untimeout @NoisyUser Timeout served</code></pre>
+             </div>
+        </div>
+
+        <!-- WARN COMMAND -->
+        <div class="command-def" id="warn">
+             <h3>.warn</h3>
+             <p class="syntax">Syntax: <code>.warn <member> <reason></code></p>
+             <p>Issues a formal warning to a member, which is typically stored by the bot.</p>
+
+             <p class="perms-title">Required Permissions:</p>
+             <ul>
+                 <li>Bot: [Permissions needed by your bot, e.g., Embed Links if it sends an embed]</li>
+                 <li>User: [Permissions needed, e.g., Kick Members, Moderate Members, or a specific Mod Role]</li>
+             </ul>
+
+             <p class="params-title">Parameters:</p>
+             <ul>
+                 <li><code><member></code> (Required): The user to warn (@Mention, ID, Username#Tag).</li>
+                 <li><code><reason></code> (Required): The specific reason for the warning.</li>
+             </ul>
+
+             <p class="examples-title">Examples:</p>
+             <div class="examples">
+                 <pre><code>.warn @ChattyUser Please keep discussions in the correct channel.</code></pre>
+             </div>
+             <p class="highlight">Note: Warnings are usually tracked by the bot. Use <code>.warnings</code> to view them.</p>
+        </div>
+
+        <!-- WARNINGS COMMAND -->
+        <div class="command-def" id="warnings">
+             <h3>.warnings</h3>
+             <p class="syntax">Syntax: <code>.warnings <member></code></p>
+             <p>Displays the list of warnings recorded for a specific member.</p>
+
+             <p class="perms-title">Required Permissions:</p>
+             <ul>
+                  <li>Bot: [Permissions needed, e.g., Embed Links]</li>
+                  <li>User: [Permissions needed, e.g., Kick Members, Moderate Members]</li>
+             </ul>
+
+             <p class="params-title">Parameters:</p>
+             <ul>
+                  <li><code><member></code> (Required): The user whose warnings you want to view (@Mention, ID, Username#Tag).</li>
+             </ul>
+
+             <p class="examples-title">Examples:</p>
+             <div class="examples">
+                  <pre><code>.warnings @ChattyUser</code></pre>
+             </div>
+        </div>
+
+        <!-- CLEARWARNINGS COMMAND -->
+        <div class="command-def" id="clearwarnings">
+             <h3>.clearwarnings</h3>
+             <p class="syntax">Syntax: <code>.clearwarnings <member> [warning_number_or_"all"]</code></p>
+             <p>Removes one or all warnings for a specified member.</p>
+
+             <p class="perms-title">Required Permissions:</p>
+             <ul>
+                 <li>Bot: [Permissions needed]</li>
+                 <li>User: [Permissions needed, usually higher level like Manage Server or Admin]</li>
+             </ul>
+
+             <p class="params-title">Parameters:</p>
+             <ul>
+                 <li><code><member></code> (Required): The user whose warnings to clear (@Mention, ID, Username#Tag).</li>
+                 <li><code>[warning_number_or_"all"]</code> (Optional): The specific warning number (from <code>.warnings</code>) to remove, or <code>all</code> to remove all warnings. Defaults to removing the latest warning if not specified.</li>
+             </ul>
+
+             <p class="examples-title">Examples:</p>
+             <div class="examples">
+                 <pre><code>.clearwarnings @ChattyUser 2</code></pre>
+                 <pre><code>.clearwarnings @ChattyUser all</code></pre>
+                 <pre><code>.clearwarnings @ChattyUser</code></pre>
+             </div>
+        </div>
+
+        <!-- PURGE COMMAND -->
+        <div class="command-def" id="purge">
+            <h3>.purge</h3>
+            <p class="syntax">Syntax: <code>.purge <amount> [member_or_role] [filter_text]</code></p>
+            <p>Deletes a specified number of messages from the current channel, with optional filtering.</p>
+
+             <p class="perms-title">Required Permissions:</p>
+            <ul>
+                <li>Bot: <code>Manage Messages</code></li>
+                <li>User: <code>Manage Messages</code></li>
+            </ul>
+
+            <p class="params-title">Parameters:</p>
+            <ul>
+                <li><code><amount></code> (Required): How many messages to check (e.g., 1-100). The bot will delete messages up to this amount that match filters.</li>
+                <li><code>[member_or_role]</code> (Optional): Filter to only delete messages from a specific @User or @Role.</li>
+                <li><code>[filter_text]</code> (Optional): Filter to only delete messages containing specific text.</li>
+                <!-- Add other filters if your bot supports them (bots, embeds, links, etc.) -->
+            </ul>
+
+            <p class="examples-title">Examples:</p>
+            <div class="examples">
+                <pre><code>.purge 50</code></pre>
+                <pre><code>.purge 25 @SpamBot#1234</code></pre>
+                <pre><code>.purge 100 @SomeRole</code></pre>
+                <pre><code>.purge 30 "bad word"</code></pre>
+            </div>
+            <p class="highlight">Note: Bots typically cannot delete messages older than 14 days due to Discord limitations.</p>
+        </div>
+
+        <!-- LOCK COMMAND -->
+        <div class="command-def" id="lock">
+            <h3>.lock</h3>
+            <p class="syntax">Syntax: <code>.lock [channel] [role] [reason]</code></p>
+            <p>Prevents the specified role (or @everyone) from sending messages in the specified channel (or current channel).</p>
+
+             <p class="perms-title">Required Permissions:</p>
+            <ul>
+                <li>Bot: <code>Manage Channels</code>, <code>Manage Roles</code></li>
+                <li>User: <code>Manage Channels</code></li>
+            </ul>
+
+            <p class="params-title">Parameters:</p>
+            <ul>
+                <li><code>[channel]</code> (Optional): The #channel to lock. Defaults to the current channel.</li>
+                <li><code>[role]</code> (Optional): The @role to deny Send Messages permission. Defaults to @everyone.</li>
+                <li><code>[reason]</code> (Optional): Why the channel is being locked.</li>
+            </ul>
+
+            <p class="examples-title">Examples:</p>
+            <div class="examples">
+                <pre><code>.lock</code></pre>
+                <pre><code>.lock #general Spam cleanup</code></pre>
+                <pre><code>.lock #announcements @Members Read-only mode</code></pre>
+            </div>
+        </div>
+
+        <!-- UNLOCK COMMAND -->
+        <div class="command-def" id="unlock">
+             <h3>.unlock</h3>
+             <p class="syntax">Syntax: <code>.unlock [channel] [role] [reason]</code></p>
+             <p>Restores permission for the specified role (or @everyone) to send messages in the specified channel (or current channel).</p>
+
+              <p class="perms-title">Required Permissions:</p>
+             <ul>
+                 <li>Bot: <code>Manage Channels</code>, <code>Manage Roles</code></li>
+                 <li>User: <code>Manage Channels</code></li>
+             </ul>
+
+             <p class="params-title">Parameters:</p>
+             <ul>
+                 <li><code>[channel]</code> (Optional): The #channel to unlock. Defaults to the current channel.</li>
+                 <li><code>[role]</code> (Optional): The @role to allow Send Messages permission (or reset to neutral). Defaults to @everyone.</li>
+                 <li><code>[reason]</code> (Optional): Why the channel is being unlocked.</li>
+             </ul>
+
+             <p class="examples-title">Examples:</p>
+             <div class="examples">
+                 <pre><code>.unlock</code></pre>
+                 <pre><code>.unlock #general Cleanup complete</code></pre>
+                 <pre><code>.unlock #announcements @Members</code></pre>
+             </div>
+        </div>
+
+    </main>
+</body>
+</html>
