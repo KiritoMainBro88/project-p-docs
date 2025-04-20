@@ -10,6 +10,14 @@
     <aside class="sidebar">
         <!-- Sidebar Navigation -->
         <h3>Project P Bot</h3> <!-- Replace -->
+
+        <!-- START: Add this Search Container -->
+        <div class="search-container">
+            <input type="search" id="searchInput" placeholder="Search commands..." aria-label="Search commands">
+            <div id="searchResults" class="search-results" aria-live="polite"></div>
+        </div>
+        <!-- END: Search Container -->
+
         <ul>
             <li><a href="index.html">Overview</a></li>
             <li><a href="getting-started.html">Getting Started & Verification</a></li>
@@ -322,5 +330,8 @@
         </div>
 
     </main>
+
+    <script src="link-replacer.js" defer></script>
+<script src="search.js" defer></script> <!-- ADD THIS ONE -->
 </body>
 </html>

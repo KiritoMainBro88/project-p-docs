@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levels & Rank Commands - Project P Bot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <!-- Updated Sidebar Navigation -->
+        <h3>Project P Bot</h3>
+
+        <!-- START: Search Container -->
+        <div class="search-container">
+            <input type="search" id="searchInput" placeholder="Search commands..." aria-label="Search commands">
+            <div id="searchResults" class="search-results" aria-live="polite"></div>
+        </div>
+        <!-- END: Search Container -->
+
+        <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="getting-started.html">Getting Started & Verification</a></li>
+        </ul>
+        <h3>Commands</h3>
+        <ul>
+            <li><a href="general.html">General</a></li>
+            <li><a href="moderation.html">Moderation</a></li>
+            <li><a href="rolemanagement.html">Role Management</a></li>
+            <li><a href="giveaways.html">Giveaways</a></li>
+            <li><a href="levels.html" class="active">Levels & Rank</a></li> {/* Correctly marked active */}
+            <li><a href="reputation.html">Reputation</a></li>
+            <li><a href="utility.html">Utility</a></li>
+            <li><a href="fun.html">Fun</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="streammonitor.html">Stream Monitor</a></li>
+            <li><a href="embedbuilder.html">Embed Builder</a></li>
+        </ul>
+         <h3>Links</h3>
+         <ul>
+            <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
+            <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
+         </ul>
+    </aside>
+
+    <main class="main-content">
+        <h1>Levels & Rank Commands</h1>
+        <p>Commands related to the server's XP and leveling system. XP is typically gained by sending messages (with a cooldown).</p>
+        <p>Default Prefix: <code>.</code></p>
+
+        <!-- RANK COMMAND -->
+        <div class="command-def" id="rank"> {/* Ensure this ID matches search-index.json */}
+            <h3>.rank</h3>
+            <p class="syntax">Syntax: <code>.rank [member]</code></p>
+            <p class="aliases">Aliases: <code>.level</code></p>
+            <p>Shows your current XP, level, and server rank, or that of another member. Displays a graphical rank card if image generation is enabled and working.</p>
+            <p class="perms-title">Required Permissions:</p>
+            <ul><li>User: None</li></ul>
+            <p class="params-title">Parameters:</p>
+            <ul><li><code>[member]</code> (Optional): The user whose rank to view (@Mention, ID, Username#Tag). Defaults to yourself.</li></ul>
+            <p class="examples-title">Examples:</p>
+            <div class="examples">
+                <pre><code>.rank</code></pre>
+                <pre><code>.rank @User123</code></pre>
+                 <pre><code>.level KiritoMainBro</code></pre>
+            </div>
+            <p class="highlight">Note: The leveling system can be disabled by server administrators.</p>
+        </div>
+
+        <!-- LEADERBOARD COMMAND -->
+        <div class="command-def" id="leaderboard"> {/* Ensure this ID matches search-index.json */}
+            <h3>.leaderboard</h3>
+            <p class="syntax">Syntax: <code>.leaderboard [page]</code></p>
+            <p class="aliases">Aliases: <code>.lb</code>, <code>.top</code></p>
+            <p>Displays the server's XP leaderboard, showing top-ranked members.</p>
+            <p class="perms-title">Required Permissions:</p>
+            <ul><li>User: None</li></ul>
+            <p class="params-title">Parameters:</p>
+            <ul><li><code>[page]</code> (Optional): The page number of the leaderboard to view (Default: 1).</li></ul>
+            <p class="examples-title">Examples:</p>
+            <div class="examples">
+                <pre><code>.leaderboard</code></pre>
+                <pre><code>.lb 2</code></pre>
+                 <pre><code>.top</code></pre>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Add Script tags at the end -->
+    <script src="link-replacer.js" defer></script>
+    <script src="search.js" defer></script>
+</body>
+</html>
