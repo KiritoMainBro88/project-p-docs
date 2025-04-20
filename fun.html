@@ -7,108 +7,115 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <aside class="sidebar">
-        <!-- Updated Sidebar Navigation -->
-        <h3>Project P Bot</h3>
 
-        <!-- START: Add this Search Container -->
-        <div class="search-container">
-            <input type="search" id="searchInput" placeholder="Search commands..." aria-label="Search commands">
-            <div id="searchResults" class="search-results" aria-live="polite"></div>
-        </div>
-        <!-- END: Search Container -->
+    <!-- VVVVV START WRAPPER VVVVV -->
+    <div class="docs-wrapper">
 
-        <ul>
-            <li><a href="index.html">Overview</a></li>
-            <li><a href="getting-started.html">Getting Started & Verification</a></li>
-        </ul>
-        <h3>Commands</h3>
-        <ul>
-            <li><a href="general.html">General</a></li>
-            <li><a href="moderation.html">Moderation</a></li>
-            <li><a href="rolemanagement.html">Role Management</a></li>
-            <li><a href="giveaways.html">Giveaways</a></li>
-            <li><a href="levels.html">Levels & Rank</a></li>
-            <li><a href="reputation.html">Reputation</a></li>
-            <li><a href="utility.html">Utility</a></li>
-            <li><a href="fun.html" class="active">Fun</a></li>
-            <li><a href="music.html">Music</a></li>
-            <li><a href="streammonitor.html">Stream Monitor</a></li>
-            <li><a href="embedbuilder.html">Embed Builder</a></li>
-            <!-- Add Verification if applicable for users -->
-        </ul>
-         <h3>Links</h3>
-         <ul>
-            <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
-            <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
-         </ul>
-    </aside>
+        <aside class="sidebar">
+            <!-- Sidebar Content -->
+            <h3>Project P Bot</h3>
 
-    <main class="main-content">
-        <h1>Fun Commands</h1>
-        <p>Commands for fun and simple interactions.</p>
-        <p>Default Prefix: <code>.</code></p>
+            <!-- Search Container -->
+            <div class="search-container">
+                <input type="search" id="searchInput" placeholder="Search commands..." aria-label="Search commands">
+                <div id="searchResults" class="search-results" aria-live="polite"></div>
+            </div>
 
-        <!-- HELLO COMMAND -->
-        <div class="command-def" id="hello">
-            <h3>.hello</h3>
-             <p class="syntax">Syntax: <code>.hello</code></p>
-             <p class="aliases">Aliases: <code>.chào</code>, <code>.lô</code></p>
-             <p>A simple command to make the bot say hello back to you.</p>
-             <p class="examples-title">Examples:</p>
-             <div class="examples"><pre><code>.hello</code></pre></div>
-             <p>The bot will respond with "Hello @YourUsername!".</p>
-        </div>
-
-        <!-- DICE COMMAND -->
-        <div class="command-def" id="dice">
-             <h3>.dice</h3>
-             <p class="syntax">Syntax: <code>.dice [sides]</code></p>
-             <p>Rolls a virtual die.</p>
-             <p class="params-title">Parameters:</p>
-             <ul><li><code>[sides]</code> (Optional): Number of sides on the die (Default: 6, Max: 10000).</li></ul>
-             <p class="examples-title">Examples:</p>
-             <div class="examples">
-                 <pre><code>.dice</code></pre>
-                 <pre><code>.dice 20</code></pre>
-             </div>
-        </div>
-
-        <!-- RPS COMMAND -->
-        <div class="command-def" id="rps">
-            <h3>.rps</h3>
-            <p class="syntax">Syntax: <code>.rps <rock|paper|scissors></code></p>
-            <p class="aliases">Aliases: <code>.rockpaperscissors</code></p>
-            <p>Play Rock Paper Scissors against the bot.</p>
-            <p class="params-title">Parameters:</p>
-            <ul><li><code><rock|paper|scissors></code> (Required): Your choice.</li></ul>
-            <p class="examples-title">Examples:</p>
-            <div class="examples"><pre><code>.rps rock</code></pre></div>
-        </div>
-
-        <!-- POLL COMMAND -->
-        <div class="command-def" id="poll">
-            <h3>.poll</h3>
-            <p class="syntax">Syntax: <code>.poll "<Question>" "<Option1>" "<Option2>" ... "<Option10>"</code></p>
-            <p>Creates a simple poll with up to 10 options using reactions.</p>
-            <p class="perms-title">Required Permissions:</p>
+            <!-- Navigation Links -->
             <ul>
-                 <li>Bot: <code>Add Reactions</code>, <code>Send Messages</code>, <code>Embed Links</code>, [Maybe <code>Manage Messages</code> to delete user command]</li>
-                 <li>User: None</li>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="getting-started.html">Getting Started & Verification</a></li>
             </ul>
-            <p class="params-title">Parameters:</p>
+            <h3>Commands</h3>
             <ul>
-                <li><code>"<Question>"</code> (Required): The poll question, enclosed in quotes.</li>
-                <li><code>"<Option1>" "<Option2>" ...</code> (Required): At least two options, each enclosed in quotes (max 10 total).</li>
+                <li><a href="general.html">General</a></li>
+                <li><a href="moderation.html">Moderation</a></li>
+                <li><a href="rolemanagement.html">Role Management</a></li>
+                <li><a href="giveaways.html">Giveaways</a></li>
+                <li><a href="levels.html">Levels & Rank</a></li>
+                <li><a href="reputation.html">Reputation</a></li>
+                <li><a href="utility.html">Utility</a></li>
+                <li><a href="fun.html" class="active">Fun</a></li> <!-- Marked as active -->
+                <li><a href="music.html">Music</a></li>
+                <li><a href="streammonitor.html">Stream Monitor</a></li>
+                <li><a href="embedbuilder.html">Embed Builder</a></li>
             </ul>
-            <p class="examples-title">Examples:</p>
-            <div class="examples"><pre><code>.poll "Favorite Color?" "Red" "Blue" "Green"</code></pre></div>
-            <p class="highlight">Note: Ensure options are enclosed in quotes if they contain spaces.</p>
-        </div>
+             <h3>Links</h3>
+             <ul>
+                <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
+                <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
+             </ul>
+        </aside>
 
-    </main>
+        <main class="main-content">
+            <h1>Fun Commands</h1>
+            <p>Commands for fun and simple interactions.</p>
+            <p>Default Prefix: <code>.</code></p>
 
+            <!-- HELLO COMMAND -->
+            <div class="command-def" id="hello">
+                <h3>.hello</h3>
+                 <p class="syntax">Syntax: <code>.hello</code></p>
+                 <p class="aliases">Aliases: <code>.chào</code>, <code>.lô</code></p>
+                 <p>A simple command to make the bot say hello back to you.</p>
+                 <p class="examples-title">Examples:</p>
+                 <div class="examples"><pre><code>.hello</code></pre></div>
+                 <p>The bot will respond with "Hello @YourUsername!".</p>
+            </div>
+
+            <!-- DICE COMMAND -->
+            <div class="command-def" id="dice">
+                 <h3>.dice</h3>
+                 <p class="syntax">Syntax: <code>.dice [sides]</code></p>
+                 <p>Rolls a virtual die.</p>
+                 <p class="params-title">Parameters:</p>
+                 <ul><li><code>[sides]</code> (Optional): Number of sides on the die (Default: 6, Max: 10000).</li></ul>
+                 <p class="examples-title">Examples:</p>
+                 <div class="examples">
+                     <pre><code>.dice</code></pre>
+                     <pre><code>.dice 20</code></pre>
+                 </div>
+            </div>
+
+            <!-- RPS COMMAND -->
+            <div class="command-def" id="rps">
+                <h3>.rps</h3>
+                <p class="syntax">Syntax: <code>.rps <rock|paper|scissors></code></p>
+                <p class="aliases">Aliases: <code>.rockpaperscissors</code></p>
+                <p>Play Rock Paper Scissors against the bot.</p>
+                <p class="params-title">Parameters:</p>
+                <ul><li><code><rock|paper|scissors></code> (Required): Your choice.</li></ul>
+                <p class="examples-title">Examples:</p>
+                <div class="examples"><pre><code>.rps rock</code></pre></div>
+            </div>
+
+            <!-- POLL COMMAND -->
+            <div class="command-def" id="poll">
+                <h3>.poll</h3>
+                <p class="syntax">Syntax: <code>.poll "<Question>" "<Option1>" "<Option2>" ... "<Option10>"</code></p>
+                <p>Creates a simple poll with up to 10 options using reactions.</p>
+                <p class="perms-title">Required Permissions:</p>
+                <ul>
+                     <li>Bot: <code>Add Reactions</code>, <code>Send Messages</code>, <code>Embed Links</code>, [Maybe <code>Manage Messages</code> to delete user command]</li>
+                     <li>User: None</li>
+                </ul>
+                <p class="params-title">Parameters:</p>
+                <ul>
+                    <li><code>"<Question>"</code> (Required): The poll question, enclosed in quotes.</li>
+                    <li><code>"<Option1>" "<Option2>" ...</code> (Required): At least two options, each enclosed in quotes (max 10 total).</li>
+                </ul>
+                <p class="examples-title">Examples:</p>
+                <div class="examples"><pre><code>.poll "Favorite Color?" "Red" "Blue" "Green"</code></pre></div>
+                <p class="highlight">Note: Ensure options are enclosed in quotes if they contain spaces.</p>
+            </div>
+
+        </main>
+
+    <!-- ^^^^^ END WRAPPER DIV ^^^^^ -->
+    </div>
+
+    <!-- Scripts loaded after main content -->
     <script src="link-replacer.js" defer></script>
-    <script src="search.js" defer></script> <!-- Ensure both scripts are linked -->
+    <script src="search.js" defer></script>
 </body>
 </html>

@@ -1,12 +1,37 @@
 /* Basic Reset & Dark Theme */
+/* --- UPDATED style.css --- */
+
+/* Keep existing body styles, but remove display:flex */
 body {
     margin: 0;
-    font-family: "gg sans", "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Discord uses gg sans */
-    background-color: #36393f; /* Discord dark background */
-    color: #dcddde; /* Discord light text */
+    font-family: "gg sans", "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #36393f;
+    color: #dcddde;
+    /* REMOVED: display: flex; */
+    /* REMOVED: min-height: 100vh; (Moved to wrapper) */
+}
+
+/* ADD THIS NEW RULE for the pages with sidebar + content */
+.docs-wrapper {
     display: flex;
     min-height: 100vh;
 }
+
+/* Keep all other existing rules for .sidebar, .main-content, .command-def, etc. */
+.sidebar {
+    width: 240px;
+    /* ... other sidebar styles ... */
+}
+
+.main-content {
+    flex-grow: 1; /* This still works inside the flex wrapper */
+    padding: 30px 40px;
+    /* ... other main-content styles ... */
+}
+
+/* ... rest of your style.css rules ... */
+
+/* ... search CSS rules ... */
 
 a {
     color: #00a8fc; /* Discord link blue */

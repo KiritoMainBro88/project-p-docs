@@ -7,141 +7,137 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <aside class="sidebar">
-        <!-- Sidebar Navigation -->
-        <h3>Project P Bot</h3> <!-- Replace with Your Bot Name -->
 
-        <!-- START: Add this Search Container -->
-        <div class="search-container">
-            <input type="search" id="searchInput" placeholder="Search commands..." aria-label="Search commands">
-            <div id="searchResults" class="search-results" aria-live="polite"></div>
-        </div>
-        <!-- END: Search Container -->
+    <!-- VVVVV START WRAPPER VVVVV -->
+    <div class="docs-wrapper">
 
-        <ul>
-            <li><a href="index.html">Overview</a></li>
-            <li><a href="getting-started.html" class="active">Getting Started & Verification</a></li>
-        </ul>
+        <aside class="sidebar">
+            <!-- Sidebar Content -->
+            <h3>Project P Bot</h3> <!-- Replace with Your Bot Name -->
 
-        <h3>Commands</h3>
-        <ul>
-            <li><a href="general.html">General</a></li>
-            <li><a href="moderation.html">Moderation</a></li>
-            <li><a href="rolemanagement.html">Role Management</a></li>
-            <li><a href="giveaways.html">Giveaways</a></li>
-            <!-- Add links for other categories -->
-        </ul>
+            <!-- START: Search Container -->
+            <div class="search-container">
+                <input type="search" id="searchInput" placeholder="Search commands..." aria-label="Search commands">
+                <div id="searchResults" class="search-results" aria-live="polite"></div>
+            </div>
+            <!-- END: Search Container -->
 
-         <h3>Links</h3>
-         <ul>
-            <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
-            <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
-         </ul>
-    </aside>
+            <!-- Navigation Links -->
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="getting-started.html" class="active">Getting Started & Verification</a></li> {/* Marked active */}
+            </ul>
+            <h3>Commands</h3>
+            <ul>
+                <li><a href="general.html">General</a></li>
+                <li><a href="moderation.html">Moderation</a></li>
+                <li><a href="rolemanagement.html">Role Management</a></li>
+                <li><a href="giveaways.html">Giveaways</a></li>
+                <li><a href="levels.html">Levels & Rank</a></li>
+                <li><a href="reputation.html">Reputation</a></li>
+                <li><a href="utility.html">Utility</a></li>
+                <li><a href="fun.html">Fun</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="streammonitor.html">Stream Monitor</a></li>
+                <li><a href="embedbuilder.html">Embed Builder</a></li>
+            </ul>
+             <h3>Links</h3>
+             <ul>
+                <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
+                <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
+             </ul>
+        </aside>
 
-    <main class="main-content">
-        <h1>Getting Started with Project P</h1> <!-- Replace with Your Bot Name -->
+        <main class="main-content">
+            <h1>Getting Started with Project P</h1> <!-- Replace with Your Bot Name -->
 
-        <h2>1. Inviting the Bot</h2>
-        <p>
-            Adding Project P to your server is simple:
-        </p>
-        <ol>
-            <li>
-                <strong>Click the Invite Link:</strong> Use this link to start the process:
-                <br>
-                <a href="[YOUR_BOT_INVITE_LINK]" target="_blank" style="font-weight: bold; font-size: 1.1em;">Invite Project P to Your Server</a>
-            </li>
-            <li>
-                <strong>Select Your Server:</strong> Choose the Discord server you want to add the bot to from the dropdown menu. You must have "Manage Server" permissions on that server.
-            </li>
-            <li>
-                <strong>Authorize Permissions:</strong> Review the permissions Project P requests. These are necessary for its commands to function correctly (e.g., `Kick Members` for `.kick`, `Manage Roles` for `.reactionrole`, `Manage Messages` for `.purge`). Click "Authorize".
-            </li>
-            <li>
-                <strong>Confirmation:</strong> You might need to complete a CAPTCHA. Once done, the bot should appear in your server's member list!
-            </li>
-        </ol>
-
-        <h2>2. Understanding the Prefix</h2>
-        <p>
-            Commands for Project P start with a prefix. The default prefix is a dot: <code>.</code>
-        </p>
-        <p>
-            To use a command, type the prefix followed immediately by the command name. For example: <code>.help</code>, <code>.ping</code>, <code>.kick @User</code>.
-        </p>
-        <!-- Add section on changing prefix if your bot supports it -->
-
-        <h2 id="verification">3. Verification (If Applicable)</h2>
-
-        <div class="highlight">
+            <h2>1. Inviting the Bot</h2>
             <p>
-                <strong>Why Verify?</strong>
-                [Explain the exact REASON users need to verify with YOUR bot. Be clear and concise. Examples: "To prevent automated bot accounts from joining and spamming, we require a quick verification step." OR "Verification ensures you agree to the server rules before accessing channels." OR "This step links your Discord account to [Other Service]..."]
+                Adding Project P to your server is simple:
             </p>
-        </div>
+            <ol>
+                <li>
+                    <strong>Click the Invite Link:</strong> Use this link to start the process:
+                    <br>
+                    <a href="[YOUR_BOT_INVITE_LINK]" target="_blank" style="font-weight: bold; font-size: 1.1em;">Invite Project P to Your Server</a>
+                </li>
+                <li>
+                    <strong>Select Your Server:</strong> Choose the Discord server you want to add the bot to from the dropdown menu. You must have "Manage Server" permissions on that server.
+                </li>
+                <li>
+                    <strong>Authorize Permissions:</strong> Review the permissions Project P requests. These are necessary for its commands to function correctly (e.g., `Kick Members` for `.kick`, `Manage Roles` for `.reactionrole`, `Manage Messages` for `.purge`). Click "Authorize".
+                </li>
+                <li>
+                    <strong>Confirmation:</strong> You might need to complete a CAPTCHA. Once done, the bot should appear in your server's member list!
+                </li>
+            </ol>
 
-        <p>
-            <strong>How to Complete Verification:</strong>
-        </p>
-        <p>
-            [**IMPORTANT:** Replace this section entirely with the *specific steps* for *your* bot's verification process. Choose the scenario that matches.]
-        </p>
+            <h2>2. Understanding the Prefix</h2>
+            <p>
+                Commands for Project P start with a prefix. The default prefix is a dot: <code>.</code>
+            </p>
+            <p>
+                To use a command, type the prefix followed immediately by the command name. For example: <code>.help</code>, <code>.ping</code>, <code>.kick @User</code>. You can change the prefix using <code>.config prefix</code> if you have `Manage Guild` permissions.
+            </p>
 
-        <!-- Scenario 1 Example: Link in DM -> Web Page Button -->
-        <ol>
-            <li>When you join the server [or use a specific command], Project P might send you a Direct Message (DM). Check your DMs from the bot. (Make sure your server privacy settings allow DMs).</li>
-            <li>The DM will contain instructions and a unique verification link. Click this link.</li>
-            <li>You'll be taken to a verification web page (often showing server rules or just a button).</li>
-            <li>Click the "Verify" or "I Agree" button on that page.</li>
-            <li>A success message should appear on the page. You can now return to Discord.</li>
-            <li>The bot should automatically grant you a 'Verified' role (or similar), giving you access to the rest of the server.</li>
-        </ol>
+            <h2 id="verification">3. Verification (Using OAuth2)</h2>
 
-        <!-- Scenario 2 Example: Command Based -->
-        <!--
-        <ol>
-            <li>Go to the designated `#verification` channel (or check the welcome message).</li>
-            <li>Type the command specified, which might be something like <code>.verify</code> or <code>.agree</code>.</li>
-            <li>The bot will process the command and grant you the verified role if successful.</li>
-        </ol>
-        -->
+            <div class="highlight">
+                <p>
+                    <strong>Why Verify?</strong>
+                    Verification is used to securely link your Discord account with Project P. This allows the bot to confirm you are a real user and potentially enables advanced features in the future or helps secure the server against bots (depending on admin configuration). It may also be required to access certain channels or gain a specific role.
+                </p>
+            </div>
 
-        <!-- Scenario 3 Example: Reaction Based -->
-        <!--
-        <ol>
-            <li>Navigate to the `#rules` or `#verify-here` channel.</li>
-            <li>Read the rules posted there.</li>
-            <li>Click the specific emoji reaction (e.g., ✅) under the rules message.</li>
-            <li>The bot will detect your reaction and assign the verified role.</li>
-        </ol>
-        -->
-
-        <p>
-            <strong>Troubleshooting Verification:</strong>
-        </p>
-        <ul>
-            <li><strong>No DM Received?</strong> Check server Privacy Settings ('Allow direct messages from server members'). Try rejoining the server or using a command like `.resend-verify` (if you implement one).</li>
-            <li><strong>Link Expired/Invalid?</strong> Verification links may time out. Try triggering the process again.</li>
-            <li><strong>Still Stuck?</strong> Ask for help in the server's support channel or contact staff.</li>
-        </ul>
+            <p>
+                <strong>How to Complete Verification:</strong>
+            </p>
+            <ol>
+                <li>Go to your Direct Messages (DMs) with the **Project P** bot. If you don't have one, try sending any message to the bot in a server it's in first, although the verify command *only works in DMs*.</li>
+                <li>Type the command <code>.verify [Server ID]</code>.
+                    <ul>
+                        <li>If the bot is only configured for verification on one server you both share, you might just need <code>.verify</code>.</li>
+                        <li>If verification is set up on multiple servers, the bot will likely list the Server IDs, and you need to specify which one you want to verify for, e.g., <code>.verify 123456789012345678</code>.</li>
+                    </ul>
+                </li>
+                <li>The bot will send you a reply in DMs containing instructions and a unique verification link button labeled "Verify Account". Click this button/link.</li>
+                <li>You will be redirected to the official Discord website to authorize Project P. Review the requested permissions (usually 'identify' and 'guilds.join') and click "Authorize".</li>
+                <li>You'll then see a confirmation page (it might ask about allowing the bot to auto-join servers for you - choose your preference).</li>
+                <li>You can now close that web page and return to Discord.</li>
+                <li>If the server administrator configured a role for verified users, the bot should automatically grant you that role shortly, giving you access.</li>
+            </ol>
 
 
-        <h2>4. Basic Usage</h2>
-        <p>
-            Once invited (and verified, if needed), you can start using commands. Try these basics:
-        </p>
-        <ul>
-            <li><code>.help</code> - Shows the main categories of commands.</li>
-            <li><code>.ping</code> - Checks the bot's response time.</li>
-        </ul>
-        <p>
-            Use the sidebar navigation to explore detailed guides for all command categories!
-        </p>
+            <p>
+                <strong>Troubleshooting Verification:</strong>
+            </p>
+            <ul>
+                <li><strong>Not receiving DMs?</strong> Go to User Settings -> Privacy & Safety -> Server Privacy Defaults -> Ensure "Allow direct messages from server members" is ON. You might need to temporarily enable this for the server where you first encountered the bot.</li>
+                 <li><strong><code>.verify</code> doesn't work in server?</strong> The <code>.verify</code> command *must* be used in your DMs with the bot, not in a server channel.</li>
+                 <li><strong>Link Expired/Invalid?</strong> Authorization links are temporary. Simply run the <code>.verify [Server ID]</code> command in DMs again to get a fresh link.</li>
+                <li><strong>Still Stuck?</strong> Contact the administrators of the specific Discord server you are trying to get verified in or ask in the bot's official <a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a>.</li>
+            </ul>
 
-    </main>
 
+            <h2>4. Basic Usage</h2>
+            <p>
+                Once invited (and verified, if needed), you can start using commands in the server. Try these basics:
+            </p>
+            <ul>
+                <li><code>.help</code> - Shows the main categories of commands.</li>
+                <li><code>.ping</code> - Checks the bot's response time.</li>
+            </ul>
+            <p>
+                Use the sidebar navigation (on the left) to explore detailed guides for all command categories!
+            </p>
+
+        </main>
+
+    <!-- ^^^^^ END WRAPPER DIV ^^^^^ -->
+    </div>
+
+    <!-- Scripts loaded after main content -->
     <script src="link-replacer.js" defer></script>
-<script src="search.js" defer></script> <!-- ADD THIS ONE -->
+    <script src="search.js" defer></script>
 </body>
 </html>

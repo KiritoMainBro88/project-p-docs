@@ -7,127 +7,138 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <aside class="sidebar">
-        <!-- Sidebar Navigation -->
-        <h3>Project P Bot</h3> <!-- Replace -->
 
-        <!-- START: Add this Search Container -->
-        <div class="search-container">
-            <input type="search" id="searchInput" placeholder="Search commands..." aria-label="Search commands">
-            <div id="searchResults" class="search-results" aria-live="polite"></div>
-        </div>
-        <!-- END: Search Container -->
+    <!-- VVVVV START WRAPPER VVVVV -->
+    <div class="docs-wrapper">
 
-        <ul>
-            <li><a href="index.html">Overview</a></li>
-            <li><a href="getting-started.html">Getting Started & Verification</a></li>
-        </ul>
+        <aside class="sidebar">
+            <!-- Sidebar Content -->
+            <h3>Project P Bot</h3> <!-- Replace -->
 
-        <h3>Commands</h3>
-        <ul>
-            <li><a href="general.html">General</a></li>
-            <li><a href="moderation.html">Moderation</a></li>
-            <li><a href="rolemanagement.html">Role Management</a></li>
-            <li><a href="giveaways.html" class="active">Giveaways</a></li>
-            <!-- Add links for other categories -->
-        </ul>
-
-         <h3>Links</h3>
-         <ul>
-            <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
-            <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
-         </ul>
-    </aside>
-
-    <main class="main-content">
-        <h1>Giveaway Commands</h1>
-        <p>Commands to create, manage, and end giveaways in your server.</p>
-        <p>Default Prefix: <code>.</code></p>
-
-        <!-- GSTART COMMAND -->
-        <div class="command-def" id="gstart">
-            <h3>.gstart</h3>
-            <p class="syntax">Syntax: <code>.gstart <duration> <winners> <prize> [--channel #channel] [--reqrole @Role]</code></p> <!-- Adjust syntax based on your bot -->
-            <p>Starts a new giveaway in the current or a specified channel.</p>
-
-            <p class="perms-title">Required Permissions:</p>
-            <ul>
-                <li>Bot: <code>Send Messages</code>, <code>Embed Links</code>, <code>Add Reactions</code>, <code>Read Message History</code></li>
-                <li>User: [Permissions needed, e.g., Manage Server, or a specific Giveaway Host Role]</li>
-            </ul>
-
-            <p class="params-title">Parameters:</p>
-            <ul>
-                <li><code><duration></code> (Required): How long the giveaway should last (e.g., <code>10m</code>, <code>1h</code>, <code>3d</code>, <code>1w</code>).</li>
-                <li><code><winners></code> (Required): How many winners to draw (e.g., <code>1</code>, <code>3w</code>).</li>
-                <li><code><prize></code> (Required): What the prize is (e.g., <code>Nitro Classic</code>, <code>Custom Role</code>).</li>
-                <li><code>[--channel #channel]</code> (Optional): The channel where the giveaway message should be posted. Defaults to the current channel.</li>
-                <li><code>[--reqrole @Role]</code> (Optional): A role users must have to enter the giveaway.</li>
-                <!-- Add other options your bot supports like --bonusrole, --message -->
-            </ul>
-
-            <p class="examples-title">Examples:</p>
-            <div class="examples">
-                <pre><code>.gstart 1d 1w Steam Key for Cool Game</code></pre>
-                <pre><code>.gstart 30m 3w "Special Server Role (30 days)" --channel #giveaways</code></pre>
-                <pre><code>.gstart 1w 1w Lifetime VIP Access --reqrole @Level10+</code></pre>
+            <!-- START: Search Container -->
+            <div class="search-container">
+                <input type="search" id="searchInput" placeholder="Search commands..." aria-label="Search commands">
+                <div id="searchResults" class="search-results" aria-live="polite"></div>
             </div>
-        </div>
+            <!-- END: Search Container -->
 
-        <!-- GLIST COMMAND -->
-        <div class="command-def" id="glist">
-            <h3>.glist</h3>
-            <p class="syntax">Syntax: <code>.glist [--channel #channel]</code></p>
-            <p>Lists the currently active giveaways in the server or a specific channel.</p>
-
-             <p class="perms-title">Required Permissions:</p>
+            <!-- Navigation Links -->
             <ul>
-                 <li>Bot: <code>Send Messages</code>, <code>Embed Links</code></li>
-                 <li>User: [Usually none, or basic access]</li>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="getting-started.html">Getting Started & Verification</a></li>
             </ul>
-
-            <p class="params-title">Parameters:</p>
+            <h3>Commands</h3>
             <ul>
-                 <li><code>[--channel #channel]</code> (Optional): Only list giveaways running in this specific channel.</li>
+                <li><a href="general.html">General</a></li>
+                <li><a href="moderation.html">Moderation</a></li>
+                <li><a href="rolemanagement.html">Role Management</a></li>
+                <li><a href="giveaways.html" class="active">Giveaways</a></li> {/* Marked active */}
+                <li><a href="levels.html">Levels & Rank</a></li>
+                <li><a href="reputation.html">Reputation</a></li>
+                <li><a href="utility.html">Utility</a></li>
+                <li><a href="fun.html">Fun</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="streammonitor.html">Stream Monitor</a></li>
+                <li><a href="embedbuilder.html">Embed Builder</a></li>
             </ul>
+             <h3>Links</h3>
+             <ul>
+                <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
+                <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
+             </ul>
+        </aside>
 
-            <p class="examples-title">Examples:</p>
-            <div class="examples">
-                 <pre><code>.glist</code></pre>
-                 <pre><code>.glist --channel #giveaways</code></pre>
+        <main class="main-content">
+            <h1>Giveaway Commands</h1>
+            <p>Commands to create, manage, and end giveaways in your server.</p>
+            <p>Default Prefix: <code>.</code> (The main group command is <code>giveaway</code> or <code>g</code>)</p>
+
+            <!-- GSTART COMMAND -->
+            <div class="command-def" id="gstart">
+                {/* Note: The python command uses @giveaway.command() so the callable command is `.g start` or `.giveaway start` */}
+                <h3>.g start / .giveaway start</h3>
+                 <p class="syntax">Syntax: <code>.g start <duration> <winners> <prize> [@RoleMention]</code></p>
+                 <p class="aliases">Aliases: <code>.g create</code>, <code>.giveaway create</code></p>
+                 <p>Starts a new giveaway in the current channel.</p>
+
+                <p class="perms-title">Required Permissions:</p>
+                <ul>
+                    <li>Bot: <code>Send Messages</code>, <code>Embed Links</code>, <code>Add Reactions</code>, <code>Read Message History</code>, <code>Manage Messages</code> (to delete command)</li>
+                    <li>User: <code>Manage Guild</code></li>
+                </ul>
+
+                <p class="params-title">Parameters:</p>
+                <ul>
+                    <li><code><duration></code> (Required): How long the giveaway should last (e.g., <code>10s</code>, <code>5m</code>, <code>1h</code>, <code>3d</code>, <code>1w</code>, <code>1h30m</code>). Minimum 10s.</li>
+                    <li><code><winners></code> (Required): How many winners to draw (must be 1 or more).</li>
+                    <li><code><prize></code> (Required): What the prize is (max 150 chars).</li>
+                    <li><code>[@RoleMention]</code> (Optional): Add a role mention at the end of the prize name to require that role for entry.</li>
+                 </ul>
+
+                <p class="examples-title">Examples:</p>
+                <div class="examples">
+                    <pre><code>.g start 1d 1 Nitro Classic</code></pre>
+                    <pre><code>.g start 30m 3 "Custom Role"</code></pre>
+                    <pre><code>.g start 1w 1 Awesome Game Key @Level 10+</code></pre>
+                </div>
             </div>
-        </div>
 
-        <!-- Add commands like .gend (end giveaway early), .greroll (reroll winner) if they exist -->
-        <!-- GEND COMMAND EXAMPLE -->
-        <!--
-        <div class="command-def" id="gend">
-            <h3>.gend</h3>
-            <p class="syntax">Syntax: <code>.gend <message_id></code></p>
-            <p>Immediately ends a specific giveaway and draws winners.</p>
-             <p class="perms-title">Required Permissions:</p> ...
-             <p class="params-title">Parameters:</p>
-             <ul><li><code><message_id></code> (Required): The ID of the giveaway message to end.</li></ul>
-             <p class="examples-title">Examples:</p>
-             <div class="examples"><pre><code>.gend 112233445566778899</code></pre></div>
-        </div>
-        -->
-        <!-- GREROLL COMMAND EXAMPLE -->
-        <!--
-        <div class="command-def" id="greroll">
-            <h3>.greroll</h3>
-            <p class="syntax">Syntax: <code>.greroll <message_id> [number_of_winners]</code></p>
-            <p>Picks new winner(s) for a giveaway that has already ended.</p>
-             <p class="perms-title">Required Permissions:</p> ...
-             <p class="params-title">Parameters:</p>
-             <ul><li><code><message_id></code> (Required): The ID of the ended giveaway message.</li><li><code>[number_of_winners]</code> (Optional): How many new winners to draw. Defaults to the original number.</li></ul>
-             <p class="examples-title">Examples:</p>
-             <div class="examples"><pre><code>.greroll 112233445566778899</code></pre><pre><code>.greroll 998877665544332211 1</code></pre></div>
-        </div>
-        -->
+            <!-- GLIST COMMAND -->
+            <div class="command-def" id="glist">
+                <h3>.g list / .giveaway list</h3>
+                <p class="syntax">Syntax: <code>.g list</code></p>
+                <p class="aliases">Aliases: None</p>
+                <p>Lists the currently active giveaways in the server.</p>
+                 <p class="perms-title">Required Permissions:</p>
+                <ul>
+                     <li>Bot: <code>Send Messages</code>, <code>Embed Links</code></li>
+                     <li>User: None</li>
+                </ul>
+                 <p class="examples-title">Examples:</p>
+                <div class="examples"><pre><code>.g list</code></pre></div>
+            </div>
 
-    </main>
+            <!-- GEND COMMAND -->
+            <div class="command-def" id="gend">
+                <h3>.g end / .giveaway end</h3>
+                <p class="syntax">Syntax: <code>.g end <message_id></code></p>
+                <p class="aliases">Aliases: None</p>
+                <p>Immediately ends a specific giveaway and draws winners.</p>
+                 <p class="perms-title">Required Permissions:</p>
+                <ul><li>User: <code>Manage Guild</code></li></ul>
+                 <p class="params-title">Parameters:</p>
+                 <ul><li><code><message_id></code> (Required): The ID of the giveaway message to end.</li></ul>
+                 <p class="examples-title">Examples:</p>
+                 <div class="examples"><pre><code>.g end 112233445566778899</code></pre></div>
+            </div>
+
+            <!-- GREROLL COMMAND -->
+            <div class="command-def" id="greroll">
+                <h3>.g reroll / .giveaway reroll</h3>
+                <p class="syntax">Syntax: <code>.g reroll <message_id> [number_to_reroll]</code></p>
+                <p class="aliases">Aliases: None</p>
+                <p>Picks new winner(s) for a giveaway that has already ended.</p>
+                 <p class="perms-title">Required Permissions:</p>
+                <ul><li>User: <code>Manage Guild</code></li></ul>
+                 <p class="params-title">Parameters:</p>
+                 <ul>
+                    <li><code><message_id></code> (Required): The ID of the *ended* giveaway message.</li>
+                    <li><code>[number_to_reroll]</code> (Optional): How many new winners to draw (Default: 1).</li>
+                </ul>
+                 <p class="examples-title">Examples:</p>
+                 <div class="examples">
+                     <pre><code>.g reroll 112233445566778899</code></pre>
+                     <pre><code>.g reroll 998877665544332211 2</code></pre>
+                 </div>
+            </div>
+
+        </main>
+
+    <!-- ^^^^^ END WRAPPER DIV ^^^^^ -->
+    </div>
+
+    <!-- Scripts loaded after main content -->
     <script src="link-replacer.js" defer></script>
-<script src="search.js" defer></script> <!-- ADD THIS ONE -->
+    <script src="search.js" defer></script>
 </body>
 </html>

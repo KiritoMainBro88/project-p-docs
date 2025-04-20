@@ -7,79 +7,144 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <aside class="sidebar">
-        <!-- Sidebar Navigation -->
-        <h3>Project P Bot</h3> <!-- Replace -->
 
-        <!-- START: Add this Search Container -->
-        <div class="search-container">
-            <input type="search" id="searchInput" placeholder="Search commands..." aria-label="Search commands">
-            <div id="searchResults" class="search-results" aria-live="polite"></div>
-        </div>
-        <!-- END: Search Container -->
+    <!-- VVVVV START WRAPPER VVVVV -->
+    <div class="docs-wrapper">
 
-        <ul>
-            <li><a href="index.html">Overview</a></li>
-            <li><a href="getting-started.html">Getting Started & Verification</a></li>
-        </ul>
+        <aside class="sidebar">
+            <!-- Sidebar Content -->
+            <h3>Project P Bot</h3> <!-- Replace -->
 
-        <h3>Commands</h3>
-        <ul>
-            <li><a href="general.html">General</a></li>
-            <li><a href="moderation.html">Moderation</a></li>
-            <li><a href="rolemanagement.html" class="active">Role Management</a></li>
-            <li><a href="giveaways.html">Giveaways</a></li>
-            <!-- Add links for other categories -->
-        </ul>
-
-         <h3>Links</h3>
-         <ul>
-            <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
-            <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
-         </ul>
-    </aside>
-
-    <main class="main-content">
-        <h1>Role Management Commands</h1>
-        <p>Commands for managing roles, including setting up reaction roles.</p>
-        <p>Default Prefix: <code>.</code></p>
-
-        <!-- REACTIONROLE COMMAND -->
-        <div class="command-def" id="reactionrole">
-            <h3>.reactionrole</h3>
-            <p class="syntax">Syntax: <code>.reactionrole [subcommand] [options...]</code></p> <!-- Adjust syntax based on your bot -->
-            <p>Sets up or manages messages where users can react with an emoji to gain or lose a specific role.</p>
-
-            <p class="perms-title">Required Permissions:</p>
-            <ul>
-                <li>Bot: <code>Manage Roles</code>, <code>Add Reactions</code>, <code>Read Message History</code>, [Maybe <code>Send Messages</code>/<code>Embed Links</code> depending on setup]</li>
-                <li>User: <code>Manage Roles</code> (or potentially <code>Manage Server</code> for setup)</li>
-            </ul>
-
-            <p class="params-title">Subcommands & Parameters (Example Structure - ADAPT TO YOUR BOT):</p>
-            <ul>
-                <li><code>.reactionrole add <channel> <message_id> <emoji> <role></code>: Adds a new reaction role mapping to an existing message.</li>
-                <li><code>.reactionrole remove <channel> <message_id> <emoji></code>: Removes a reaction role mapping.</li>
-                <li><code>.reactionrole create [channel] "Your message text here"</code>: Creates a new message specifically for reaction roles (bot might then prompt for emoji/role pairs).</li>
-                 <li><code>.reactionrole list [channel] [message_id]</code>: Lists active reaction roles on a message or channel.</li>
-                 <!-- Add other subcommands like 'edit', 'type' (toggle, unique, etc.) if they exist -->
-            </ul>
-
-            <p class="examples-title">Examples (ADAPT TO YOUR BOT'S SYNTAX):</p>
-            <div class="examples">
-                <pre><code>.reactionrole add #roles 112233445566778899 ✅ @VerifiedRole</code></pre>
-                <pre><code>.reactionrole add #get-roles 998877665544332211 <:custom_emoji:123> @TeamBlue</code></pre>
-                <pre><code>.reactionrole create #assign-roles "React here for notification roles!"</code></pre>
-                <pre><code>.reactionrole remove #roles 112233445566778899 ✅</code></pre>
+            <!-- START: Search Container -->
+            <div class="search-container">
+                <input type="search" id="searchInput" placeholder="Search commands..." aria-label="Search commands">
+                <div id="searchResults" class="search-results" aria-live="polite"></div>
             </div>
-            <p class="highlight">This command can be complex. Ensure you provide the correct Channel ID, Message ID, Emoji (including custom ones like `<:name:id>`), and Role (@Mention or ID).</p>
-        </div>
+            <!-- END: Search Container -->
 
-        <!-- Add other role management commands if they exist (e.g., .addrole, .removerole, .roleinfo) -->
+            <!-- Navigation Links -->
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="getting-started.html">Getting Started & Verification</a></li>
+            </ul>
+            <h3>Commands</h3>
+            <ul>
+                <li><a href="general.html">General</a></li>
+                <li><a href="moderation.html">Moderation</a></li>
+                <li><a href="rolemanagement.html" class="active">Role Management</a></li> {/* Marked active */}
+                <li><a href="giveaways.html">Giveaways</a></li>
+                <li><a href="levels.html">Levels & Rank</a></li>
+                <li><a href="reputation.html">Reputation</a></li>
+                <li><a href="utility.html">Utility</a></li>
+                <li><a href="fun.html">Fun</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="streammonitor.html">Stream Monitor</a></li>
+                <li><a href="embedbuilder.html">Embed Builder</a></li>
+            </ul>
+             <h3>Links</h3>
+             <ul>
+                <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
+                <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
+             </ul>
+        </aside>
 
-    </main>
+        <main class="main-content">
+            <h1>Role Management Commands</h1>
+            <p>Commands for managing roles, including setting up reaction roles.</p>
+            <p>Default Prefix: <code>.</code></p>
 
+            <!-- REACTIONROLE COMMAND GROUP -->
+             <div class="command-def" id="reactionrole">
+                <h3>.reactionrole / .rr</h3>
+                 <p class="syntax">Syntax: <code>.reactionrole [subcommand] [options...]</code></p>
+                 <p>Sets up or manages messages where users can react with an emoji to gain or lose a specific role.</p>
+                 <p class="highlight">Use subcommands like <code>.rr create</code>, <code>.rr add</code>, <code>.rr remove</code>, <code>.rr list</code>. See details below.</p>
+             </div>
+
+            <!-- REACTIONROLE CREATE -->
+             <div class="command-def" id="rr_create">
+                <h3>.reactionrole create / .rr create</h3>
+                <p class="syntax">Syntax: <code>.rr create <#channel> "<Title>" "<Description>" [ColorHex]</code></p>
+                <p>Creates a new message embed specifically designed for reaction roles.</p>
+                <p class="perms-title">Required Permissions:</p>
+                <ul><li>User: <code>Manage Guild</code></li></ul>
+                <p class="params-title">Parameters:</p>
+                <ul>
+                    <li><code><#channel></code> (Required): The channel where the reaction role message will be posted.</li>
+                    <li><code>"<Title>"</code> (Required): The title for the embed (use quotes).</li>
+                    <li><code>"<Description>"</code> (Required): The main text for the embed (use quotes).</li>
+                    <li><code>[ColorHex]</code> (Optional): A hex color code (e.g., `#7289da`) for the embed's side border. Defaults to Discord blurple.</li>
+                </ul>
+                <p class="examples-title">Examples:</p>
+                <div class="examples">
+                    <pre><code>.rr create #get-roles "Color Roles" "React to get your color!" #f1c40f</code></pre>
+                </div>
+                 <p class="highlight">The bot will reply with the **Message ID** of the created message, which you need for the `.rr add` command.</p>
+            </div>
+
+            <!-- REACTIONROLE ADD -->
+             <div class="command-def" id="rr_add">
+                <h3>.reactionrole add / .rr add</h3>
+                 <p class="syntax">Syntax: <code>.rr add <message_id_or_link> <emoji> <@role></code></p>
+                 <p>Adds an emoji-to-role mapping onto a specific message (usually one created with `.rr create`).</p>
+                 <p class="perms-title">Required Permissions:</p>
+                <ul>
+                    <li>Bot: <code>Manage Roles</code>, <code>Add Reactions</code>, <code>Read Message History</code></li>
+                    <li>User: <code>Manage Roles</code></li>
+                </ul>
+                <p class="params-title">Parameters:</p>
+                 <ul>
+                     <li><code><message_id_or_link></code> (Required): The Message ID or the full Discord Message Link of the target embed message.</li>
+                     <li><code><emoji></code> (Required): The emoji users should react with (Standard Unicode or Custom like `<:name:id>`).</li>
+                     <li><code><@role></code> (Required): The role mention (@RoleName) to assign/remove when users react.</li>
+                 </ul>
+                 <p class="examples-title">Examples:</p>
+                <div class="examples">
+                    <pre><code>.rr add 112233445566778899 ✅ @Verified</code></pre>
+                    <pre><code>.rr add https://discord.com/channels/GUILD_ID/CHANNEL_ID/MESSAGE_ID <:pogchamp:1234> @Cool Kids</code></pre>
+                 </div>
+                <p class="highlight">Ensure the bot has permissions to manage the role and add reactions.</p>
+            </div>
+
+            <!-- REACTIONROLE REMOVE -->
+             <div class="command-def" id="rr_remove">
+                 <h3>.reactionrole remove / .rr remove</h3>
+                 <p class="syntax">Syntax: <code>.rr remove <message_id_or_link> <emoji></code></p>
+                 <p>Removes a specific emoji-role mapping from a message.</p>
+                 <p class="perms-title">Required Permissions:</p>
+                 <ul><li>User: <code>Manage Roles</code></li></ul>
+                 <p class="params-title">Parameters:</p>
+                <ul>
+                     <li><code><message_id_or_link></code> (Required): The Message ID or full Discord Message Link.</li>
+                     <li><code><emoji></code> (Required): The specific emoji mapping to remove.</li>
+                 </ul>
+                 <p class="examples-title">Examples:</p>
+                <div class="examples"><pre><code>.rr remove 112233445566778899 ✅</code></pre></div>
+            </div>
+
+            <!-- REACTIONROLE LIST -->
+            <div class="command-def" id="rr_list">
+                <h3>.reactionrole list / .rr list</h3>
+                <p class="syntax">Syntax: <code>.rr list [message_id_or_link]</code></p>
+                <p>Lists the configured reaction roles for a specific message or for the entire server.</p>
+                <p class="perms-title">Required Permissions:</p>
+                 <ul><li>User: None (typically)</li></ul>
+                 <p class="params-title">Parameters:</p>
+                 <ul><li><code>[message_id_or_link]</code> (Optional): If provided, lists roles only for that message. If omitted, lists all reaction roles in the server.</li></ul>
+                 <p class="examples-title">Examples:</p>
+                 <div class="examples">
+                    <pre><code>.rr list 112233445566778899</code></pre>
+                    <pre><code>.rr list</code></pre>
+                 </div>
+            </div>
+
+        </main>
+
+    <!-- ^^^^^ END WRAPPER DIV ^^^^^ -->
+    </div>
+
+    <!-- Scripts loaded after main content -->
     <script src="link-replacer.js" defer></script>
-<script src="search.js" defer></script> <!-- ADD THIS ONE -->
+    <script src="search.js" defer></script>
 </body>
 </html>
