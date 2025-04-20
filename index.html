@@ -5,67 +5,218 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project P Bot - Overview</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Link to the landing page specific styles -->
+    <link rel="stylesheet" href="css/landing-page.css">
     <!-- Optional: Add Favicon link here -->
+    <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
 </head>
 <body>
-    <aside class="sidebar">
-        <!-- Sidebar Navigation (Consistent across pages) -->
-        <h3>Project P Bot</h3> <!-- Replace with Your Bot Name -->
-        <ul>
-            <li><a href="index.html" class="active">Overview</a></li>
-            <li><a href="getting-started.html">Getting Started & Verification</a></li>
-        </ul>
 
-        <h3>Commands</h3>
-        <ul>
-            <li><a href="general.html">General</a></li>
-            <li><a href="moderation.html">Moderation</a></li>
-            <li><a href="rolemanagement.html">Role Management</a></li>
-            <li><a href="giveaways.html">Giveaways</a></li>
-            <!-- Add links for other categories if you create them -->
-        </ul>
-
-         <h3>Links</h3>
-         <ul>
-            <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
-            <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
-            <!-- Add Privacy Policy link if applicable -->
-         </ul>
-    </aside>
-
-    <main class="main-content">
-        <h1>Overview of Project P</h1> <!-- Replace with Your Bot Name -->
-        <!-- Optional Avatar -->
-        <!-- <img src="images/bot-avatar.png" alt="Project P Avatar" style="float: right; width: 100px; margin-left: 20px; border-radius: 50%;"> -->
-
-        <p>
-            Welcome to the documentation for <strong>Project P</strong>! This bot is designed to enhance your Discord server with powerful moderation tools, engaging features, and helpful utilities.
-        </p>
-        <p>
-            Whether you're looking to maintain order, automate roles, run giveaways, or just add some basic commands, Project P has you covered.
-        </p>
-
-        <h2>Core Features</h2>
-        <ul>
-            <li>🛡️ <strong>Moderation:</strong> Keep your community safe with commands like <code>.kick</code>, <code>.ban</code>, <code>.warn</code>, <code>.mute</code> (timeout), <code>.purge</code>, <code>.lock</code>/<code>.unlock</code> channels.</li>
-            <li>⚙️ <strong>Role Management:</strong> Set up easy self-assignable roles using <code>.reactionrole</code>.</li>
-            <li>🎉 <strong>Giveaways:</strong> Host exciting giveaways with <code>.gstart</code> and manage them with <code>.glist</code>, <code>.gend</code>, <code>.greroll</code>.</li>
-            <li>⚙️ <strong>General Utility:</strong> Check bot latency with <code>.ping</code>, get a simple greeting with <code>.hello</code>, and access command lists with <code>.help</code>.</li>
-        </ul>
-
-        <h2>Quick Start</h2>
-        <ol>
-            <li><strong>Invite the Bot:</strong> <a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Click here to invite Project P</a>. (Ensure you have 'Manage Server' permissions).</li>
-            <li><strong>Command Prefix:</strong> The default prefix is <code>.</code> (a dot). Use it before commands (e.g., <code>.help</code>).</li>
-            <li><strong>Initial Setup:</strong> Visit the <a href="getting-started.html">Getting Started & Verification</a> guide for setup steps, including any required verification.</li>
-            <li><strong>Explore Commands:</strong> Use the sidebar navigation to dive into detailed documentation for each command category.</li>
-            <li><strong>Get Help in Discord:</strong> Type <code>.help</code> in your server for a basic command list.</li>
-        </ol>
-
-        <div class="highlight">
-            <strong>Need Help?</strong> If you encounter issues or have questions, please join our <a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a>!
+    <!-- Using the landing page header from the previous step -->
+    <header class="landing-header">
+        <div class="header-container">
+            <div class="logo">
+                <!-- Optional: <img src="images/bot-avatar.png" alt="Project P Logo" height="40"> -->
+                <span class="bot-name">Project P</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite</a></li>
+                    <li><a href="general.html">Commands</a></li> <!-- Link to command docs -->
+                    <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-    </main>
+    <!-- Hero Section (From previous step) -->
+    <section id="hero">
+         <div class="hero-content">
+            <!-- Optional: <img src="images/bot-avatar.png" alt="Project P Avatar" class="hero-avatar"> -->
+            <h1>One Discord Bot to Enhance Your Server</h1>
+            <p>Moderation, music, levels, giveaways, utility, verification, and much more. Everything you need in one customizable package.</p>
+            <div class="hero-buttons">
+                <a href="[YOUR_BOT_INVITE_LINK]" class="btn btn-primary" target="_blank">Invite Project P</a>
+                <a href="general.html" class="btn btn-secondary">View Commands</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid Section (From previous step) -->
+    <section id="features-grid">
+        <div class="grid-container">
+            <h2>List of Modules</h2>
+            <div class="features">
+                 <!-- Repeat this block for each major category/cog -->
+                <div class="feature-card">
+                    <i class="icon-placeholder">🛡️</i> <!-- Placeholder Icon -->
+                    <h3>Moderation</h3>
+                    <p>Keep your server safe with kicks, bans, warns, timeouts, purging, and channel locks.</p>
+                    <a href="moderation.html" class="card-link">.moderation</a> <!-- Link to specific docs page -->
+                </div>
+                 <div class="feature-card">
+                    <i class="icon-placeholder">⚙️</i>
+                    <h3>Role Management</h3>
+                    <p>Set up reaction roles for easy self-assignment.</p>
+                    <a href="rolemanagement.html" class="card-link">.reactionrole</a>
+                </div>
+                 <div class="feature-card">
+                    <i class="icon-placeholder">🎉</i>
+                    <h3>Giveaways</h3>
+                    <p>Host exciting giveaways with flexible options and management tools.</p>
+                    <a href="giveaways.html" class="card-link">.giveaway</a>
+                </div>
+                <div class="feature-card">
+                    <i class="icon-placeholder">📈</i>
+                    <h3>Levels & Rank</h3>
+                    <p>Engage users with an XP system, levels, rank cards, and leaderboards.</p>
+                    <a href="levels.html" class="card-link">.rank</a>
+                </div>
+                 <div class="feature-card">
+                    <i class="icon-placeholder">👍</i>
+                    <h3>Reputation</h3>
+                    <p>Allow users to give reputation points to each other with cooldowns.</p>
+                    <a href="reputation.html" class="card-link">.rep</a>
+                </div>
+                 <div class="feature-card">
+                    <i class="icon-placeholder">🛠️</i>
+                    <h3>Utility</h3>
+                    <p>Helpful commands like ping, user/server info, avatar lookup, and bot stats.</p>
+                    <a href="utility.html" class="card-link">.utility</a>
+                </div>
+                 <div class="feature-card">
+                    <i class="icon-placeholder">😄</i>
+                    <h3>Fun</h3>
+                    <p>Simple interactive commands like dice rolls, RPS, and polls.</p>
+                    <a href="fun.html" class="card-link">.fun</a>
+                </div>
+                 <div class="feature-card">
+                    <i class="icon-placeholder">🎵</i>
+                    <h3>Music</h3>
+                    <p>Play music from various sources with queue management, volume control, and looping.</p>
+                    <a href="music.html" class="card-link">.play</a>
+                </div>
+                 <div class="feature-card">
+                    <i class="icon-placeholder">📺</i>
+                    <h3>Stream Monitor</h3>
+                    <p>Get notified when your favorite YouTube/TikTok creators go live.</p>
+                    <a href="streammonitor.html" class="card-link">.notify</a>
+                </div>
+                 <div class="feature-card">
+                    <i class="icon-placeholder">✨</i>
+                    <h3>Embed Builder</h3>
+                    <p>Create and send custom rich embed messages easily.</p>
+                    <a href="embedbuilder.html" class="card-link">.embed</a>
+                </div>
+                <div class="feature-card">
+                    <i class="icon-placeholder">🔗</i>
+                    <h3>Verification</h3>
+                    <p>Secure your server with an optional OAuth2 verification system.</p>
+                    <a href="getting-started.html#verification" class="card-link">.verify</a>
+                </div>
+                 <div class="feature-card">
+                    <i class="icon-placeholder">📜</i>
+                    <h3>Logging</h3>
+                    <p>Comprehensive event logging to keep track of server activity (Admin Setup).</p>
+                    <a href="general.html" class="card-link">.config</a> <!-- Link to general/config -->
+                </div>
+                 <div class="feature-card">
+                    <i class="icon-placeholder">🤖</i>
+                    <h3>AutoMod</h3>
+                    <p>Automatic moderation based on configured rules (Admin Setup).</p>
+                    <a href="general.html" class="card-link">.config</a> <!-- Link to general/config -->
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Highlight Sections (From previous step) -->
+     <section class="feature-highlight alt-layout"> <!-- Use alt-layout for image left -->
+         <div class="highlight-container">
+            <div class="image-content">
+                <!-- Replace with an actual image showcasing your rank card or leaderboard -->
+                <img src="https://via.placeholder.com/400x250/5865F2/FFFFFF?text=Rank+Card+Example" alt="XP System Rank Card">
+            </div>
+             <div class="text-content">
+                <h2>XP / Leveling System</h2>
+                <p>Keep your community engaged! Project P features a robust XP and leveling system with leaderboards and optional level-based role rewards.</p>
+                <p>Track user activity and see how you rank against others. Customize level-up messages and assign roles automatically as users reach milestones.</p>
+                <a href="levels.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <section class="feature-highlight">
+        <div class="highlight-container">
+            <div class="text-content">
+                <h2>Powerful Moderation</h2>
+                <p>Maintain a safe and orderly server with a comprehensive suite of moderation tools. From simple warnings and kicks to advanced timeouts and automated filtering.</p>
+                <p>Configure logging to keep track of moderation actions and server events. Set up automod rules to handle common issues automatically.</p>
+                 <a href="moderation.html" class="btn btn-secondary">Learn More</a>
+            </div>
+             <div class="image-content">
+                 <!-- Replace with an image showcasing modlog or command usage -->
+                <img src="https://via.placeholder.com/400x250/3BA55D/FFFFFF?text=Mod+Command+Example" alt="Moderation Tools">
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Open Source Section (From previous step) -->
+    <section id="about">
+        <div class="about-container">
+            <div class="image-content">
+                 <img src="https://via.placeholder.com/300x200/FFFFFF/000000?text=Bot+Philosophy" alt="About Project P">
+             </div>
+             <div class="text-content">
+                <h2>About Project P</h2>
+                <p>Project P aims to be a reliable and feature-rich bot for Discord communities. Built with flexibility and usability in mind using discord.py.</p>
+                <p>We are constantly working to improve the bot and add new features based on user feedback.</p>
+             </div>
+        </div>
+    </section>
+
+    <!-- Footer (From previous step) -->
+    <footer class="landing-footer">
+        <div class="footer-container">
+             <div class="footer-column">
+                <h4>Project P</h4>
+                <ul>
+                    <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite</a></li>
+                    <li><a href="general.html">Commands</a></li>
+                    <li><a href="getting-started.html">Getting Started</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="index.html">Docs Home</a></li>
+                </ul>
+            </div>
+             <div class="footer-column">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© KiritoMainBro <span id="copyright-year"></span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for dynamic year (Keep this) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('copyright-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+
+    <!-- No need for search.js on the main landing page unless you want the search bar in the header -->
+    <!-- If you add the search bar to the *header*, you would add the script link here -->
+    <!-- <script src="search.js" defer></script> -->
+
 </body>
 </html>
