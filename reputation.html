@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reputation Commands - Project P Bot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <!-- Updated Sidebar Navigation -->
+        <h3>Project P Bot</h3>
+        <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="getting-started.html">Getting Started & Verification</a></li>
+        </ul>
+        <h3>Commands</h3>
+        <ul>
+            <li><a href="general.html">General</a></li>
+            <li><a href="moderation.html">Moderation</a></li>
+            <li><a href="rolemanagement.html">Role Management</a></li>
+            <li><a href="giveaways.html">Giveaways</a></li>
+            <li><a href="levels.html">Levels & Rank</a></li>
+            <li><a href="reputation.html" class="active">Reputation</a></li>
+            <li><a href="utility.html">Utility</a></li>
+            <li><a href="fun.html">Fun</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="streammonitor.html">Stream Monitor</a></li>
+            <li><a href="embedbuilder.html">Embed Builder</a></li>
+        </ul>
+         <h3>Links</h3>
+         <ul>
+            <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
+            <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
+         </ul>
+    </aside>
+
+    <main class="main-content">
+        <h1>Reputation Commands</h1>
+        <p>Commands for giving and viewing user reputation points.</p>
+        <p>Default Prefix: <code>.</code></p>
+
+        <!-- REP COMMAND -->
+        <div class="command-def" id="rep">
+            <h3>.rep</h3>
+            <p class="syntax">Syntax: <code>.rep <member></code></p>
+            <p class="aliases">Aliases: <code>.+rep</code></p>
+            <p>Gives one reputation point to another member. Subject to a cooldown (typically 24 hours).</p>
+            <p class="perms-title">Required Permissions:</p>
+            <ul><li>User: None</li></ul>
+            <p class="params-title">Parameters:</p>
+            <ul><li><code><member></code> (Required): The user to give reputation to (@Mention, ID, Username#Tag). Cannot be yourself or a bot.</li></ul>
+            <p class="examples-title">Examples:</p>
+            <div class="examples"><pre><code>.rep @HelpfulUser</code></pre></div>
+            <p class="highlight">Note: Reputation system can be disabled by admins.</p>
+        </div>
+
+        <!-- REPLEADERBOARD COMMAND -->
+        <div class="command-def" id="repleaderboard">
+            <h3>.repleaderboard</h3>
+            <p class="syntax">Syntax: <code>.repleaderboard [page]</code></p>
+            <p class="aliases">Aliases: <code>.reps</code>, <code>.repboard</code></p>
+            <p>Displays the server's reputation leaderboard.</p>
+            <p class="perms-title">Required Permissions:</p>
+            <ul><li>User: None</li></ul>
+            <p class="params-title">Parameters:</p>
+            <ul><li><code>[page]</code> (Optional): The page number of the leaderboard to view (Default: 1).</li></ul>
+            <p class="examples-title">Examples:</p>
+            <div class="examples">
+                <pre><code>.repleaderboard</code></pre>
+                <pre><code>.reps 2</code></pre>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

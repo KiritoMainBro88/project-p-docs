@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Commands - Project P Bot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <!-- Updated Sidebar Navigation -->
+        <h3>Project P Bot</h3>
+        <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="getting-started.html">Getting Started & Verification</a></li>
+        </ul>
+        <h3>Commands</h3>
+        <ul>
+            <li><a href="general.html">General</a></li>
+            <li><a href="moderation.html">Moderation</a></li>
+            <li><a href="rolemanagement.html">Role Management</a></li>
+            <li><a href="giveaways.html">Giveaways</a></li>
+            <li><a href="levels.html">Levels & Rank</a></li>
+            <li><a href="reputation.html">Reputation</a></li>
+            <li><a href="utility.html">Utility</a></li>
+            <li><a href="fun.html">Fun</a></li>
+            <li><a href="music.html" class="active">Music</a></li>
+            <li><a href="streammonitor.html">Stream Monitor</a></li>
+            <li><a href="embedbuilder.html">Embed Builder</a></li>
+        </ul>
+         <h3>Links</h3>
+         <ul>
+            <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
+            <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
+         </ul>
+    </aside>
+
+    <main class="main-content">
+        <h1>Music Commands</h1>
+        <p>Commands to play music in voice channels. Supports YouTube, SoundCloud, Spotify links, and search terms.</p>
+        <p>Default Prefix: <code>.</code> (Main command group is <code>play</code> or alias <code>p</code>)</p>
+
+        <!-- PLAY COMMAND -->
+        <div class="command-def" id="play">
+            <h3>.play</h3>
+            <p class="syntax">Syntax: <code>.play <URL or Search Query></code></p>
+            <p class="aliases">Aliases: <code>.p</code></p>
+            <p>Plays a song or adds it to the queue. Joins your voice channel if not connected.</p>
+            <p class="perms-title">Required Permissions:</p>
+            <ul>
+                 <li>Bot: <code>Connect</code>, <code>Speak</code>, <code>Embed Links</code></li>
+                 <li>User: Must be in a voice channel.</li>
+            </ul>
+            <p class="params-title">Parameters:</p>
+            <ul><li><code><URL or Search Query></code> (Required): A direct URL (YouTube, SoundCloud, Spotify track/album/playlist) or text to search for on YouTube.</li></ul>
+            <p class="examples-title">Examples:</p>
+            <div class="examples">
+                <pre><code>.play https://www.youtube.com/watch?v=...</code></pre>
+                <pre><code>.p Lo-fi Hip Hop Radio</code></pre>
+                <pre><code>.play https://open.spotify.com/track/...</code></pre>
+            </div>
+            <p class="highlight">Note: For Spotify playlists/albums, the bot typically searches for and plays the first track found based on the metadata.</p>
+        </div>
+
+        <!-- STOP COMMAND -->
+        <div class="command-def" id="stop">
+             <h3>.play stop</h3>
+             <p class="syntax">Syntax: <code>.play stop</code></p>
+             <p class="aliases">Aliases: <code>.p stop</code>, <code>.p leave</code>, <code>.p disconnect</code>, <code>.p dc</code></p>
+             <p>Stops the music, clears the queue, and disconnects the bot from the voice channel.</p>
+             <p class="examples-title">Examples:</p>
+             <div class="examples"><pre><code>.p stop</code></pre></div>
+        </div>
+
+        <!-- SKIP COMMAND -->
+        <div class="command-def" id="skip">
+             <h3>.play skip</h3>
+             <p class="syntax">Syntax: <code>.play skip</code></p>
+             <p class="aliases">Aliases: <code>.p skip</code>, <code>.p s</code>, <code>.p next</code></p>
+             <p>Skips the currently playing song and plays the next one in the queue.</p>
+             <p class="examples-title">Examples:</p>
+             <div class="examples"><pre><code>.p skip</code></pre></div>
+        </div>
+
+        <!-- QUEUE COMMAND -->
+        <div class="command-def" id="queue">
+             <h3>.play queue</h3>
+             <p class="syntax">Syntax: <code>.play queue [page]</code></p>
+             <p class="aliases">Aliases: <code>.p queue</code>, <code>.p q</code>, <code>.p list</code></p>
+             <p>Displays the current music queue.</p>
+             <p class="params-title">Parameters:</p>
+             <ul><li><code>[page]</code> (Optional): The page number of the queue to view (Default: 1).</li></ul>
+             <p class="examples-title">Examples:</p>
+             <div class="examples">
+                 <pre><code>.p queue</code></pre>
+                 <pre><code>.p q 2</code></pre>
+            </div>
+        </div>
+
+        <!-- NOWPLAYING COMMAND -->
+        <div class="command-def" id="nowplaying">
+             <h3>.play nowplaying</h3>
+             <p class="syntax">Syntax: <code>.play nowplaying</code></p>
+             <p class="aliases">Aliases: <code>.p nowplaying</code>, <code>.p np</code></p>
+             <p>Shows detailed information about the currently playing song, including duration, progress, requester, volume, and loop status.</p>
+             <p class="examples-title">Examples:</p>
+             <div class="examples"><pre><code>.p np</code></pre></div>
+        </div>
+
+        <!-- VOLUME COMMAND -->
+        <div class="command-def" id="volume">
+            <h3>.play volume</h3>
+            <p class="syntax">Syntax: <code>.play volume [percentage]</code></p>
+            <p class="aliases">Aliases: <code>.p volume</code>, <code>.p vol</code></p>
+            <p>Shows or sets the music playback volume (0-200%).</p>
+            <p class="params-title">Parameters:</p>
+            <ul><li><code>[percentage]</code> (Optional): Volume level from 0 to 200. If omitted, displays the current volume.</li></ul>
+            <p class="examples-title">Examples:</p>
+            <div class="examples">
+                <pre><code>.p volume</code></pre>
+                <pre><code>.p vol 80</code></pre>
+                <pre><code>.p vol 150</code></pre>
+            </div>
+        </div>
+
+        <!-- LOOP COMMAND -->
+        <div class="command-def" id="loop">
+            <h3>.play loop</h3>
+            <p class="syntax">Syntax: <code>.play loop [off|song|queue]</code></p>
+            <p class="aliases">Aliases: <code>.p loop</code></p>
+            <p>Shows or sets the loop mode for the music player.</p>
+            <p class="params-title">Parameters:</p>
+            <ul><li><code>[off|song|queue]</code> (Optional): The loop mode to set. 'song' repeats the current track, 'queue' repeats the entire queue. If omitted, displays the current mode.</li></ul>
+            <p class="examples-title">Examples:</p>
+            <div class="examples">
+                <pre><code>.p loop</code></pre>
+                <pre><code>.p loop song</code></pre>
+                <pre><code>.p loop queue</code></pre>
+                <pre><code>.p loop off</code></pre>
+            </div>
+        </div>
+
+        <!-- 24/7 COMMAND -->
+        <div class="command-def" id="247">
+            <h3>.play 24/7</h3>
+            <p class="syntax">Syntax: <code>.play 24/7</code></p>
+            <p class="aliases">Aliases: <code>.p 24/7</code>, <code>.p stay</code>, <code>.p keep</code></p>
+            <p>Toggles whether the bot should stay connected to the voice channel even when the queue is empty.</p>
+            <p class="perms-title">Required Permissions:</p>
+            <ul><li>User: <code>Manage Guild</code></li></ul>
+            <p class="examples-title">Examples:</p>
+            <div class="examples"><pre><code>.p 24/7</code></pre></div>
+        </div>
+
+    </main>
+</body>
+</html>

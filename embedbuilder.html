@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Builder Commands - Project P Bot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <!-- Updated Sidebar Navigation -->
+        <h3>Project P Bot</h3>
+        <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="getting-started.html">Getting Started & Verification</a></li>
+        </ul>
+        <h3>Commands</h3>
+        <ul>
+            <li><a href="general.html">General</a></li>
+            <li><a href="moderation.html">Moderation</a></li>
+            <li><a href="rolemanagement.html">Role Management</a></li>
+            <li><a href="giveaways.html">Giveaways</a></li>
+            <li><a href="levels.html">Levels & Rank</a></li>
+            <li><a href="reputation.html">Reputation</a></li>
+            <li><a href="utility.html">Utility</a></li>
+            <li><a href="fun.html">Fun</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="streammonitor.html">Stream Monitor</a></li>
+            <li><a href="embedbuilder.html" class="active">Embed Builder</a></li>
+        </ul>
+         <h3>Links</h3>
+         <ul>
+            <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
+            <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
+         </ul>
+    </aside>
+
+    <main class="main-content">
+        <h1>Embed Builder Commands</h1>
+        <p>Create, edit, and send custom rich embed messages.</p>
+        <p>Default Prefix: <code>.</code></p>
+
+        <!-- EMBED CREATE COMMAND -->
+        <div class="command-def" id="embed create">
+            <h3>.embed create</h3>
+            <p class="syntax">Syntax: <code>.embed create <name></code></p>
+            <p>Creates a new, named embed definition in the database.</p>
+            <p class="perms-title">Required Permissions:</p>
+            <ul><li>User: <code>Manage Messages</code></li></ul>
+            <p class="params-title">Parameters:</p>
+            <ul><li><code><name></code> (Required): A unique name for the embed (no spaces, max 50 chars).</li></ul>
+            <p class="examples-title">Examples:</p>
+            <div class="examples"><pre><code>.embed create rules-embed</code></pre></div>
+        </div>
+
+        <!-- EMBED EDIT COMMAND -->
+        <div class="command-def" id="embed edit">
+            <h3>.embed edit</h3>
+            <p class="syntax">Syntax: <code>.embed edit <name> <option> [value]</code></p>
+            <p>Edits a specific part of a saved embed definition.</p>
+            <p class="perms-title">Required Permissions:</p>
+            <ul><li>User: <code>Manage Messages</code></li></ul>
+            <p class="params-title">Parameters:</p>
+            <ul>
+                <li><code><name></code> (Required): The name of the embed to edit.</li>
+                <li><code><option></code> (Required): The part of the embed to change (see list below).</li>
+                <li><code>[value]</code> (Depends on option): The new value. Omit to clear some options.</li>
+            </ul>
+             <p class="params-title">Available Options:</p>
+             <ul>
+                <li><code>title <text></code> - Sets the main title.</li>
+                <li><code>description <text></code> - Sets the main text body (supports Markdown).</li>
+                <li><code>color <#hex or none></code> - Sets the side color (e.g., <code>#FF0000</code> for red).</li>
+                <li><code>url <link></code> - Makes the title a hyperlink.</li>
+                <li><code>author_name <text></code> - Sets the text for the author line (top).</li>
+                <li><code>author_icon <image_url></code> - Sets the small icon next to the author name.</li>
+                <li><code>author_url <link></code> - Makes the author name a hyperlink.</li>
+                <li><code>footer_text <text></code> - Sets the text for the footer line (bottom).</li>
+                <li><code>footer_icon <image_url></code> - Sets the small icon next to the footer text.</li>
+                <li><code>thumbnail <image_url or none></code> - Sets the small image in the top-right corner.</li>
+                <li><code>image <image_url or none></code> - Sets the large image displayed below the content.</li>
+                <li><code>addfield <FieldName> | <FieldValue> [| inline:true]</code> - Adds a field. Use `|` to separate name and value. Add `| inline:true` at the end to make it inline (max 3 inline fields per row).</li>
+                <li><code>removefield <index></code> - Removes a field by its number (starting from 1).</li>
+                <li><code>clearfields</code> - Removes all fields from the embed.</li>
+             </ul>
+             <p class="examples-title">Examples:</p>
+            <div class="examples">
+                <pre><code>.embed edit rules-embed title Server Rules</code></pre>
+                <pre><code>.embed edit rules-embed color #ffcc00</code></pre>
+                <pre><code>.embed edit rules-embed description Please read and follow these rules.</code></pre>
+                <pre><code>.embed edit rules-embed addfield Rule 1 | Be respectful to everyone.</code></pre>
+                <pre><code>.embed edit rules-embed addfield Links | [Website](...) | inline:true</code></pre>
+                <pre><code>.embed edit rules-embed removefield 1</code></pre>
+                <pre><code>.embed edit rules-embed image none</code></pre>
+            </div>
+        </div>
+
+        <!-- EMBED VIEW COMMAND -->
+        <div class="command-def" id="embed view">
+             <h3>.embed view</h3>
+             <p class="syntax">Syntax: <code>.embed view <name></code></p>
+             <p>Shows a preview of the specified custom embed.</p>
+             <p class="perms-title">Required Permissions:</p>
+             <ul><li>User: <code>Manage Messages</code></li></ul>
+             <p class="params-title">Parameters:</p>
+             <ul><li><code><name></code> (Required): The name of the embed to preview.</li></ul>
+             <p class="examples-title">Examples:</p>
+             <div class="examples"><pre><code>.embed view rules-embed</code></pre></div>
+        </div>
+
+        <!-- EMBED SEND COMMAND -->
+        <div class="command-def" id="embed send">
+             <h3>.embed send</h3>
+             <p class="syntax">Syntax: <code>.embed send <name> [#channel]</code></p>
+             <p>Sends the specified custom embed to a channel.</p>
+             <p class="perms-title">Required Permissions:</p>
+             <ul>
+                  <li>User: <code>Manage Messages</code></li>
+                  <li>Bot: <code>Send Messages</code>, <code>Embed Links</code> (in the target channel)</li>
+             </ul>
+             <p class="params-title">Parameters:</p>
+             <ul>
+                 <li><code><name></code> (Required): The name of the embed to send.</li>
+                 <li><code>[#channel]</code> (Optional): The text channel to send the embed to. Defaults to the current channel.</li>
+             </ul>
+             <p class="examples-title">Examples:</p>
+             <div class="examples">
+                 <pre><code>.embed send rules-embed</code></pre>
+                 <pre><code>.embed send welcome-embed #welcome</code></pre>
+            </div>
+        </div>
+
+        <!-- EMBED DELETE COMMAND -->
+        <div class="command-def" id="embed delete">
+             <h3>.embed delete</h3>
+             <p class="syntax">Syntax: <code>.embed delete <name></code></p>
+             <p>Deletes a saved embed definition permanently.</p>
+             <p class="perms-title">Required Permissions:</p>
+             <ul><li>User: <code>Manage Messages</code></li></ul>
+              <p class="params-title">Parameters:</p>
+             <ul><li><code><name></code> (Required): The name of the embed definition to delete.</li></ul>
+             <p class="examples-title">Examples:</p>
+             <div class="examples"><pre><code>.embed delete old-rules</code></pre></div>
+        </div>
+
+        <!-- EMBED LIST COMMAND -->
+        <div class="command-def" id="embed list">
+             <h3>.embed list</h3>
+             <p class="syntax">Syntax: <code>.embed list</code></p>
+             <p>Lists the names of all saved custom embeds in the server.</p>
+             <p class="perms-title">Required Permissions:</p>
+             <ul><li>User: <code>Manage Messages</code></li></ul>
+             <p class="examples-title">Examples:</p>
+             <div class="examples"><pre><code>.embed list</code></pre></div>
+        </div>
+
+    </main>
+</body>
+</html>

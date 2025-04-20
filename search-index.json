@@ -1,0 +1,422 @@
+[
+    {
+      "name": ".help",
+      "aliases": [],
+      "category": "General",
+      "description": "Displays command list or info about a command/category.",
+      "url": "general.html#help"
+    },
+    {
+      "name": ".ping",
+      "aliases": [],
+      "category": "General",
+      "description": "Checks the bot's latency.",
+      "url": "general.html#ping"
+    },
+    {
+      "name": ".hello",
+      "aliases": [".chào", ".lô"],
+      "category": "Fun",
+      "description": "Greets the user.",
+      "url": "fun.html#hello"
+    },
+    {
+      "name": ".kick",
+      "aliases": [],
+      "category": "Moderation",
+      "description": "Removes a member from the server.",
+      "url": "moderation.html#kick"
+    },
+    {
+      "name": ".ban",
+      "aliases": [],
+      "category": "Moderation",
+      "description": "Bans a member from the server.",
+      "url": "moderation.html#ban"
+    },
+    {
+      "name": ".unban",
+      "aliases": [],
+      "category": "Moderation",
+      "description": "Unbans a user by ID.",
+      "url": "moderation.html#unban"
+    },
+    {
+        "name": ".timeout",
+        "aliases": [".mute"],
+        "category": "Moderation",
+        "description": "Times out a member (Discord Timeout feature).",
+        "url": "moderation.html#timeout"
+    },
+    {
+        "name": ".untimeout",
+        "aliases": [".unmute"],
+        "category": "Moderation",
+        "description": "Removes timeout from a member.",
+        "url": "moderation.html#untimeout"
+    },
+    {
+        "name": ".warn",
+        "aliases": [],
+        "category": "Moderation",
+        "description": "Issues a formal warning.",
+        "url": "moderation.html#warn"
+    },
+    {
+        "name": ".warnings",
+        "aliases": [".warns", ".infractions"],
+        "category": "Moderation",
+        "description": "Shows warnings for a member.",
+        "url": "moderation.html#warnings"
+    },
+    {
+        "name": ".unwarn",
+        "aliases": [],
+        "category": "Moderation",
+        "description": "Removes a specific warning by ID.",
+        "url": "moderation.html#unwarn"
+    },
+    {
+        "name": ".clearwarnings",
+        "aliases": [],
+        "category": "Moderation",
+        "description": "Removes ALL warnings for a member.",
+        "url": "moderation.html#clearwarnings"
+    },
+    {
+        "name": ".purge",
+        "aliases": [".clear", ".clean"],
+        "category": "Moderation",
+        "description": "Deletes messages.",
+        "url": "moderation.html#purge"
+    },
+    {
+        "name": ".lock",
+        "aliases": [],
+        "category": "Moderation",
+        "description": "Locks a channel.",
+        "url": "moderation.html#lock"
+    },
+    {
+        "name": ".unlock",
+        "aliases": [],
+        "category": "Moderation",
+        "description": "Unlocks a channel.",
+        "url": "moderation.html#unlock"
+    },
+    {
+        "name": ".reactionrole",
+        "aliases": [".rr"],
+        "category": "Role Management",
+        "description": "Manages reaction roles.",
+        "url": "rolemanagement.html#reactionrole"
+    },
+    {
+        "name": ".reactionrole create",
+        "aliases": [".rr create"],
+        "category": "Role Management",
+        "description": "Creates embed message for reaction roles.",
+        "url": "rolemanagement.html#rr_create"
+    },
+    {
+        "name": ".reactionrole add",
+        "aliases": [".rr add"],
+        "category": "Role Management",
+        "description": "Adds emoji-role mapping.",
+        "url": "rolemanagement.html#rr_add"
+    },
+    {
+        "name": ".reactionrole remove",
+        "aliases": [".rr remove"],
+        "category": "Role Management",
+        "description": "Removes emoji-role mapping.",
+        "url": "rolemanagement.html#rr_remove"
+    },
+    {
+        "name": ".reactionrole list",
+        "aliases": [".rr list"],
+        "category": "Role Management",
+        "description": "Lists reaction role mappings.",
+        "url": "rolemanagement.html#rr_list"
+    },
+    {
+        "name": ".giveaway",
+        "aliases": [".g"],
+        "category": "Giveaways",
+        "description": "Main giveaway command group.",
+        "url": "giveaways.html"
+    },
+    {
+        "name": ".g start",
+        "aliases": [".giveaway start", ".g create", ".giveaway create"],
+        "category": "Giveaways",
+        "description": "Starts a new giveaway.",
+        "url": "giveaways.html#gstart"
+    },
+    {
+        "name": ".g list",
+        "aliases": [".giveaway list"],
+        "category": "Giveaways",
+        "description": "Lists active giveaways.",
+        "url": "giveaways.html#glist"
+    },
+    {
+        "name": ".g end",
+        "aliases": [".giveaway end"],
+        "category": "Giveaways",
+        "description": "Ends a giveaway early.",
+        "url": "giveaways.html#gend"
+    },
+    {
+        "name": ".g reroll",
+        "aliases": [".giveaway reroll"],
+        "category": "Giveaways",
+        "description": "Rerolls winners for an ended giveaway.",
+        "url": "giveaways.html#greroll"
+    },
+      {
+        "name": ".rank",
+        "aliases": [".level"],
+        "category": "Levels & Rank",
+        "description": "Shows user rank card/info.",
+        "url": "levels.html#rank"
+    },
+    {
+        "name": ".leaderboard",
+        "aliases": [".lb", ".top"],
+        "category": "Levels & Rank",
+        "description": "Shows the XP leaderboard.",
+        "url": "levels.html#leaderboard"
+    },
+    {
+        "name": ".rep",
+        "aliases": [".+rep"],
+        "category": "Reputation",
+        "description": "Gives reputation point.",
+        "url": "reputation.html#rep"
+    },
+    {
+        "name": ".repleaderboard",
+        "aliases": [".reps", ".repboard"],
+        "category": "Reputation",
+        "description": "Shows the reputation leaderboard.",
+        "url": "reputation.html#repleaderboard"
+    },
+    {
+        "name": ".uptime",
+        "aliases": [],
+        "category": "Utility",
+        "description": "Shows bot uptime.",
+        "url": "utility.html#uptime"
+    },
+    {
+        "name": ".avatar",
+        "aliases": [".av"],
+        "category": "Utility",
+        "description": "Shows user avatar.",
+        "url": "utility.html#avatar"
+    },
+    {
+        "name": ".userinfo",
+        "aliases": [".user", ".whois"],
+        "category": "Utility",
+        "description": "Shows detailed user info.",
+        "url": "utility.html#userinfo"
+    },
+    {
+        "name": ".serverinfo",
+        "aliases": [".server", ".guildinfo", ".guild"],
+        "category": "Utility",
+        "description": "Shows detailed server info.",
+        "url": "utility.html#serverinfo"
+    },
+    {
+        "name": ".roleinfo",
+        "aliases": [".role"],
+        "category": "Utility",
+        "description": "Shows info about a role.",
+        "url": "utility.html#roleinfo"
+    },
+    {
+        "name": ".membercount",
+        "aliases": [".memberc", ".mc"],
+        "category": "Utility",
+        "description": "Shows server member counts.",
+        "url": "utility.html#membercount"
+    },
+    {
+        "name": ".channelinfo",
+        "aliases": [".channel"],
+        "category": "Utility",
+        "description": "Shows info about a channel.",
+        "url": "utility.html#channelinfo"
+    },
+    {
+        "name": ".botinfo",
+        "aliases": [".bi", ".stats", ".info"],
+        "category": "Utility",
+        "description": "Shows detailed bot info and stats.",
+        "url": "utility.html#botinfo"
+    },
+    {
+        "name": ".dice",
+        "aliases": [],
+        "category": "Fun",
+        "description": "Rolls a die.",
+        "url": "fun.html#dice"
+    },
+    {
+        "name": ".rps",
+        "aliases": [".rockpaperscissors"],
+        "category": "Fun",
+        "description": "Play Rock Paper Scissors.",
+        "url": "fun.html#rps"
+    },
+    {
+        "name": ".poll",
+        "aliases": [],
+        "category": "Fun",
+        "description": "Creates a simple poll.",
+        "url": "fun.html#poll"
+    },
+    {
+        "name": ".play",
+        "aliases": [".p"],
+        "category": "Music",
+        "description": "Plays music or adds to queue.",
+        "url": "music.html#play"
+    },
+    {
+        "name": ".play stop",
+        "aliases": [".p stop", ".p leave", ".p disconnect", ".p dc"],
+        "category": "Music",
+        "description": "Stops music and disconnects.",
+        "url": "music.html#stop"
+    },
+    {
+        "name": ".play skip",
+        "aliases": [".p skip", ".p s", ".p next"],
+        "category": "Music",
+        "description": "Skips the current song.",
+        "url": "music.html#skip"
+    },
+    {
+        "name": ".play queue",
+        "aliases": [".p queue", ".p q", ".p list"],
+        "category": "Music",
+        "description": "Shows the music queue.",
+        "url": "music.html#queue"
+    },
+    {
+        "name": ".play nowplaying",
+        "aliases": [".p nowplaying", ".p np"],
+        "category": "Music",
+        "description": "Shows the currently playing song.",
+        "url": "music.html#nowplaying"
+    },
+    {
+        "name": ".play volume",
+        "aliases": [".p volume", ".p vol"],
+        "category": "Music",
+        "description": "Shows or sets music volume.",
+        "url": "music.html#volume"
+    },
+    {
+        "name": ".play loop",
+        "aliases": [".p loop"],
+        "category": "Music",
+        "description": "Shows or sets the loop mode.",
+        "url": "music.html#loop"
+    },
+    {
+        "name": ".play 24/7",
+        "aliases": [".p 24/7", ".p stay", ".p keep"],
+        "category": "Music",
+        "description": "Toggles bot stay in VC mode.",
+        "url": "music.html#247"
+    },
+    {
+        "name": ".notify add",
+        "aliases": [],
+        "category": "Stream Monitor",
+        "description": "Adds a creator for live notifications.",
+        "url": "streammonitor.html#notify_add"
+    },
+    {
+        "name": ".notify remove",
+        "aliases": [".notify delete"],
+        "category": "Stream Monitor",
+        "description": "Removes a creator from notifications.",
+        "url": "streammonitor.html#notify_remove"
+    },
+    {
+        "name": ".notify list",
+        "aliases": [],
+        "category": "Stream Monitor",
+        "description": "Lists monitored creators.",
+        "url": "streammonitor.html#notify_list"
+    },
+    {
+        "name": ".notify check",
+        "aliases": [".notify status"],
+        "category": "Stream Monitor",
+        "description": "Manually checks creator live status.",
+        "url": "streammonitor.html#notify_check"
+    },
+    {
+        "name": ".embed create",
+        "aliases": [],
+        "category": "Embed Builder",
+        "description": "Creates a new embed definition.",
+        "url": "embedbuilder.html#embed_create"
+    },
+    {
+        "name": ".embed edit",
+        "aliases": [],
+        "category": "Embed Builder",
+        "description": "Edits an existing embed.",
+        "url": "embedbuilder.html#embed_edit"
+    },
+    {
+        "name": ".embed view",
+        "aliases": [],
+        "category": "Embed Builder",
+        "description": "Previews a custom embed.",
+        "url": "embedbuilder.html#embed_view"
+    },
+    {
+        "name": ".embed send",
+        "aliases": [],
+        "category": "Embed Builder",
+        "description": "Sends a custom embed.",
+        "url": "embedbuilder.html#embed_send"
+    },
+    {
+        "name": ".embed delete",
+        "aliases": [],
+        "category": "Embed Builder",
+        "description": "Deletes an embed definition.",
+        "url": "embedbuilder.html#embed_delete"
+    },
+    {
+        "name": ".embed list",
+        "aliases": [],
+        "category": "Embed Builder",
+        "description": "Lists all custom embeds.",
+        "url": "embedbuilder.html#embed_list"
+    }
+    ,{
+        "name": ".config prefix",
+        "aliases": [],
+        "category": "Configuration",
+        "description": "Sets or shows the bot's command prefix.",
+        "url": "config.html#config_prefix"
+      },
+      {
+        "name": ".config verification role",
+        "aliases": [],
+        "category": "Configuration",
+        "description": "Sets the role given upon verification.",
+        "url": "config.html#config_verification_role"
+      }
+]

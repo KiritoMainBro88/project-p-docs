@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Monitor Commands - Project P Bot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <!-- Updated Sidebar Navigation -->
+        <h3>Project P Bot</h3>
+        <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="getting-started.html">Getting Started & Verification</a></li>
+        </ul>
+        <h3>Commands</h3>
+        <ul>
+            <li><a href="general.html">General</a></li>
+            <li><a href="moderation.html">Moderation</a></li>
+            <li><a href="rolemanagement.html">Role Management</a></li>
+            <li><a href="giveaways.html">Giveaways</a></li>
+            <li><a href="levels.html">Levels & Rank</a></li>
+            <li><a href="reputation.html">Reputation</a></li>
+            <li><a href="utility.html">Utility</a></li>
+            <li><a href="fun.html">Fun</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="streammonitor.html" class="active">Stream Monitor</a></li>
+            <li><a href="embedbuilder.html">Embed Builder</a></li>
+        </ul>
+         <h3>Links</h3>
+         <ul>
+            <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
+            <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
+         </ul>
+    </aside>
+
+    <main class="main-content">
+        <h1>Stream Monitor Commands</h1>
+        <p>Configure notifications for when YouTube or TikTok creators go live.</p>
+        <p>Default Prefix: <code>.</code></p>
+
+        <!-- NOTIFY ADD COMMAND -->
+        <div class="command-def" id="notify add"> <!-- ID adjusted for potential mapping -->
+            <h3>.notify add</h3>
+            <p class="syntax">Syntax: <code>.notify add <youtube|tiktok> <Username/ChannelID/URL> [#channel]</code></p>
+            <p>Adds a creator to the notification list for a channel. The bot will post a message when they go live.</p>
+            <p class="perms-title">Required Permissions:</p>
+            <ul><li>User: <code>Manage Guild</code></li></ul>
+            <p class="params-title">Parameters:</p>
+            <ul>
+                <li><code><youtube|tiktok></code> (Required): The platform ('youtube' or 'tiktok').</li>
+                <li><code><Username/ChannelID/URL></code> (Required): The creator's identifier. Examples:
+                    <ul>
+                        <li>YouTube: Channel name (`MrBeast`), handle (`@MrBeast`), channel ID (`UC...`), full channel URL.</li>
+                        <li>TikTok: Username (`charlidamelio`), full profile URL.</li>
+                    </ul>
+                </li>
+                <li><code>[#channel]</code> (Optional): The text channel where notifications should be sent. Defaults to the current channel.</li>
+            </ul>
+            <p class="examples-title">Examples:</p>
+            <div class="examples">
+                <pre><code>.notify add youtube MrBeast #streams</code></pre>
+                <pre><code>.notify add tiktok charlidamelio</code></pre>
+                 <pre><code>.notify add youtube https://www.youtube.com/channel/UCX6OQ3DkcsbYNE6H8uQQuVA #general</code></pre>
+            </div>
+            <p class="highlight">Note: TikTok detection can be less reliable than YouTube.</p>
+        </div>
+
+        <!-- NOTIFY REMOVE COMMAND -->
+        <div class="command-def" id="notify remove">
+            <h3>.notify remove</h3>
+            <p class="syntax">Syntax: <code>.notify remove <youtube|tiktok> <Username/ID/URL> [#channel]</code></p>
+            <p class="aliases">Aliases: <code>.notify delete</code></p>
+            <p>Removes a creator from the notification list for a channel.</p>
+            <p class="perms-title">Required Permissions:</p>
+            <ul><li>User: <code>Manage Guild</code></li></ul>
+            <p class="params-title">Parameters:</p>
+            <ul>
+                <li><code><youtube|tiktok></code> (Required): The platform.</li>
+                <li><code><Username/ID/URL></code> (Required): The identifier used when adding (or check <code>.notify list</code>).</li>
+                <li><code>[#channel]</code> (Optional): The channel the notification was configured for. Defaults to the current channel.</li>
+            </ul>
+             <p class="examples-title">Examples:</p>
+            <div class="examples"><pre><code>.notify remove youtube MrBeast #streams</code></pre></div>
+        </div>
+
+        <!-- NOTIFY LIST COMMAND -->
+        <div class="command-def" id="notify list">
+            <h3>.notify list</h3>
+            <p class="syntax">Syntax: <code>.notify list [#channel]</code></p>
+            <p>Lists all creators being monitored for notifications in a specific channel (or the current one).</p>
+            <p class="perms-title">Required Permissions:</p>
+            <ul><li>User: None (or Manage Guild, depending on desired restriction)</li></ul>
+             <p class="params-title">Parameters:</p>
+            <ul><li><code>[#channel]</code> (Optional): The channel to list notifications for. Defaults to current channel.</li></ul>
+            <p class="examples-title">Examples:</p>
+            <div class="examples"><pre><code>.notify list #live-streams</code></pre></div>
+        </div>
+
+        <!-- NOTIFY CHECK COMMAND -->
+        <div class="command-def" id="notify check">
+             <h3>.notify check</h3>
+             <p class="syntax">Syntax: <code>.notify check <youtube|tiktok> <Username/ID/URL> [#channel]</code></p>
+             <p class="aliases">Aliases: <code>.notify status</code></p>
+             <p>Manually checks the current live status of a creator already added to the notification list.</p>
+             <p class="perms-title">Required Permissions:</p>
+             <ul><li>User: <code>Manage Guild</code></li></ul>
+              <p class="params-title">Parameters:</p>
+             <ul>
+                 <li><code><youtube|tiktok></code> (Required): The platform.</li>
+                 <li><code><Username/ID/URL></code> (Required): The identifier used when adding.</li>
+                 <li><code>[#channel]</code> (Optional): The channel the notification was configured for. Defaults to current channel.</li>
+             </ul>
+             <p class="examples-title">Examples:</p>
+             <div class="examples"><pre><code>.notify check youtube MrBeast</code></pre></div>
+        </div>
+
+    </main>
+</body>
+</html>
