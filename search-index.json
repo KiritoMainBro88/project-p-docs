@@ -418,5 +418,26 @@
         "category": "Configuration",
         "description": "Sets the role given upon verification.",
         "url": "config.html#config_verification_role"
+      },
+      {
+        "name": ".verify",
+        "aliases": [],
+        "category": "Verification",
+        "description": "Starts the OAuth2 verification process (DM Only).",
+        "url": "getting-started.html#verification"
+      },
+      {
+        "name": ".addverified",
+        "aliases": [],
+        "category": "Verification",
+        "description": "(Owner Only) Adds ALL consenting verified users to a server.",
+        "url": "verification.html#addverified" 
+      },
+      {
+        "name": ".transferverified",
+        "aliases": [".tv", ".syncmembers"],
+        "category": "Verification",
+        "description": "(Admin Only) Adds verified members FROM an old server TO this server.",
+        "url": "verification.html#transferverified"
       }
 ]

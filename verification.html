@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Verification Commands - Project P Bot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="docs-wrapper">
+        <aside class="sidebar">
+            <!-- Full Sidebar with Search -->
+             <h3>Project P Bot</h3>
+            <div class="search-container">
+                <input type="search" id="searchInput" placeholder="Search commands..." aria-label="Search commands">
+                <div id="searchResults" class="search-results" aria-live="polite"></div>
+            </div>
+             <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="getting-started.html">Getting Started & Verification</a></li>
+            </ul>
+            <h3>Commands</h3>
+            <ul>
+                <li><a href="general.html">General</a></li>
+                <li><a href="moderation.html">Moderation</a></li>
+                <li><a href="rolemanagement.html">Role Management</a></li>
+                <li><a href="giveaways.html">Giveaways</a></li>
+                <li><a href="levels.html">Levels & Rank</a></li>
+                <li><a href="reputation.html">Reputation</a></li>
+                <li><a href="utility.html">Utility</a></li>
+                <li><a href="fun.html">Fun</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="streammonitor.html">Stream Monitor</a></li>
+                <li><a href="embedbuilder.html">Embed Builder</a></li>
+                 <li><a href="verification.html" class="active">Verification (Admin)</a></li> {/* Active page */}
+            </ul>
+             <h3>Links</h3>
+             <ul>
+                <li><a href="[YOUR_SUPPORT_SERVER_LINK]" target="_blank">Support Server</a></li>
+                <li><a href="[YOUR_BOT_INVITE_LINK]" target="_blank">Invite Bot</a></li>
+             </ul>
+        </aside>
+
+        <main class="main-content">
+            <h1>Verification Admin Commands</h1>
+            <p>Commands for managing verified members, primarily for backup or transfer purposes.</p>
+            <p>Default Prefix: <code>.</code></p>
+
+            <!-- TRANSFERVERIFIED COMMAND -->
+            <div class="command-def" id="transferverified">
+                <h3>.transferverified</h3>
+                <p class="syntax">Syntax: <code>.transferverified <source_guild_id></code></p>
+                <p class="aliases">Aliases: <code>.tv</code>, <code>.syncmembers</code></p>
+                <p>Adds members who verified for a specific *old* server (source_guild_id) AND consented to auto-join, into the *current* server where the command is run. Intended as a one-time transfer or backup restoration tool.</p>
+                <p class="perms-title">Required Permissions:</p>
+                <ul>
+                    <li>Bot: <code>Create Instant Invite</code> or <code>Manage Guild / Add Members</code> (in the current/target server)</li>
+                    <li>User: <code>Administrator</code> (in the current/target server)</li>
+                </ul>
+                 <p class="params-title">Parameters:</p>
+                 <ul>
+                    <li><code><source_guild_id></code> (Required): The exact server ID of the *old* server where users originally verified with this bot.</li>
+                </ul>
+                 <p class="examples-title">Examples:</p>
+                <div class="examples">
+                    <pre><code>.transferverified 111222333444555666</code></pre>
+                </div>
+                <p class="highlight">
+                    <strong>Important Notes:</strong><br>
+                    - Run this command in the **NEW** server you want to add members to.<br>
+                    - Only users who verified for the specific `source_guild_id` *and* clicked "Yes, Allow Auto-Join" on the consent page will be added.<br>
+                    - This command can only be successfully run **once per source_guild_id** for this target server to prevent accidental mass adds.<br>
+                    - Requires the bot to have appropriate permissions in the **target (current)** server.<br>
+                    - May take a long time and hit Discord rate limits if many users need adding.
+                </p>
+            </div>
+
+            <!-- ADDVERIFIED COMMAND (OWNER ONLY) -->
+            <div class="command-def" id="addverified">
+                <h3>.addverified</h3>
+                <p class="syntax">Syntax: <code>.addverified <target_guild_id></code></p>
+                <p class="aliases">Aliases: None</p>
+                <p><strong>(Bot Owner Only)</strong> Attempts to add ALL users who have ever verified with this bot instance (on any server) AND consented to auto-join, into the specified target server.</p>
+                <p class="perms-title">Required Permissions:</p>
+                <ul>
+                     <li>Bot: <code>Create Instant Invite</code> or <code>Manage Guild / Add Members</code> (in the target server)</li>
+                     <li>User: Bot Owner</li>
+                </ul>
+                 <p class="params-title">Parameters:</p>
+                 <ul><li><code><target_guild_id></code> (Required): The ID of the server to add users to.</li></ul>
+                <p class="examples-title">Examples:</p>
+                <div class="examples"><pre><code>.addverified 999888777666555444</code></pre></div>
+                <p class="highlight"><strong>WARNING:</strong> This is a powerful global command. Use with extreme caution as it attempts to add potentially many users. Primarily for specific bot administration purposes.</p>
+            </div>
+
+        </main>
+
+    </div> <!-- END docs-wrapper -->
+
+    <script src="link-replacer.js" defer></script>
+    <script src="search.js" defer></script>
+</body>
+</html>
